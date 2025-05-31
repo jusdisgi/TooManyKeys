@@ -281,12 +281,12 @@ points:
           - key
           - thumb_key
       anchor:
-        ref: finger_middle_bottom
-        shift: [0.5 ks, -kp -3]
+        ref: finger_index_bottom
+        shift: [8, -20]
       columns:
         near:
           key:
-            column_net: C3
+            column_net: C2
           rows:
             fan.key:
               led_prev: LED_2
@@ -295,7 +295,7 @@ points:
           key:
             stagger: stagger_thumb_mid
             splay: splay_thumb_mid
-            column_net: C4
+            column_net: C3
             spread: ks + 1
           rows:
             fan.key:
@@ -305,7 +305,7 @@ points:
           key:
             stagger: stagger_thumb_far
             splay: splay_thumb_far
-            column_net: C5
+            column_net: C4
             spread: ks + 1
           rows:
             fan.key:
@@ -316,83 +316,122 @@ points:
           row_net: R3
 
     # Helper points
-    plate_outline_bottom_1:
-      key.tags:
-        - helper
-      anchor:
-        - ref: finger_ring_bottom
-          shift: [ks * 0.465 + 0.005, -kp * 0.74 + 0.07]
-    plate_outline_bottom_2:
-      key.tags:
-        - helper
-      anchor:
-        - ref: thumb_near_fan
-          shift: [-ks * 0.47 - 0.01, -kp * 0.475 - 0.05]
-    plate_outline_bottom_3:
-      key.tags:
-        - helper
+    roller:
+      key:
+        tags:
+          helper
+          encoder
+        column_net: C5
+        row_net: R3
       anchor: 
-        - ref: thumb_far_fan
-          shift: [-ks * 0.725 - 0.028,kp * 0.475 - 0.009]
-          affect: ['x','y']
-    plate_outline_bottom_4:
-      key.tags:
-        - helper
-      anchor: 
-        - ref: thumb_far_fan
-          shift: [-ks * 0.725 - 0.028,-kp * 0.48 + 0.023]
-          affect: ['x','y']
+        - ref: thumb_mid_fan
+          shift: [6,20]
+          rotate: 90  
 
-    mcu_cover_top_left:
-      key.tags:
-        - helper
-      anchor:
+
+    bav70_num1: &bav70proto
+      key:
+        tags:
+          helper
+          diode
+        A1: finger_outer_num
+        A2: finger_pinky_num
+      anchor: &bav70anchor
         - ref: finger_inner_top
-          shift: [ks * 0.53 + 0.043,kp * 0.35 - 0.015]
-    mcu_cover_top_right:
-      key.tags:
-        - helper
+          shift: [14,-1]
+          rotate: -90
+    bav70_num2:
+      <<:  *bav70proto
+      key.A1: finger_ring_num
+      key.A2: finger_middle_num
       anchor:
-        - ref: mcu_cover_top_left
-          shift: [ks + 0.72,0]
-    mcu_cover_bottom_right:
-      key.tags:
-        - helper
+        <<: *bav70anchor
+        shift: [20,-1]
+    bav70_num3:
+      <<:  *bav70proto
+      key.A1: finger_index_num
+      key.A2: finger_inner_num
       anchor:
-        - ref: mcu_cover_top_right
-          shift: [0,-kp * 3.2 + 0.339]
-          rotate: (splay_thumb_mid + splay_thumb_far) * 2
-    mcu_cover_bottom_left:
-      key.tags:
-        - helper
+        <<: *bav70anchor
+        shift: [26,-1]
+    bav70_top1:
+      <<:  *bav70proto
+      key.A1: finger_outer_top
+      key.A2: finger_outer_top
       anchor:
-        - aggregate:
-            method: intersect
-            parts:
-              - ref: mcu_cover_top_left
-              - ref: mcu_cover_bottom_right
+        <<: *bav70anchor
+        shift: [14,-5]
+    bav70_top2:
+      <<:  *bav70proto
+      key.A1: finger_ring_top
+      key.A2: finger_middle_top
+      anchor:
+        <<: *bav70anchor
+        shift: [20,-5]
+    bav70_top3:
+      <<:  *bav70proto
+      key.A1: finger_index_top
+      key.A2: finger_inner_top
+      anchor:
+        <<: *bav70anchor
+        shift: [26,-5]
+    bav70_home1:
+      <<:  *bav70proto
+      key.A1: finger_outer_home
+      key.A2: finger_outer_home
+      anchor:
+        <<: *bav70anchor
+        shift: [14,-14]
+    bav70_home2:
+      <<:  *bav70proto
+      key.A1: finger_ring_home
+      key.A2: finger_middle_home
+      anchor:
+        <<: *bav70anchor
+        shift: [20,-14]
+    bav70_home3:
+      <<:  *bav70proto
+      key.A1: finger_index_home
+      key.A2: finger_inner_home
+      anchor:
+        <<: *bav70anchor
+        shift: [26,-14]
+    bav70_bottom1:
+      <<:  *bav70proto
+      key.A1: finger_outer_bottom
+      key.A2: finger_outer_bottom
+      anchor:
+        <<: *bav70anchor
+        shift: [14,-18]
+    bav70_bottom2:
+      <<:  *bav70proto
+      key.A1: finger_ring_bottom
+      key.A2: finger_middle_bottom
+      anchor:
+        <<: *bav70anchor
+        shift: [20,-18]
+    bav70_bottom3:
+      <<:  *bav70proto
+      key.A1: finger_index_bottom
+      key.A2: finger_inner_bottom
+      anchor:
+        <<: *bav70anchor
+        shift: [26,-18]
+    bav70_fan1:
+      <<:  *bav70proto
+      key.A1: thumb_near_fan
+      key.A2: thumb_mid_fan
+      anchor:
+        <<: *bav70anchor
+        shift: [32,-1]
+    bav70_fan2:
+      <<:  *bav70proto
+      key.A1: thumb_far_fan
+      key.A2: roller
+      anchor:
+        <<: *bav70anchor
+        shift: [32,-5]
 
-    plate_additional_outline_top:
-      key.tags:
-        - helper
-      anchor:
-        - ref: mcu_cover_top_left
-          shift: [-1.03,0]
-    plate_additional_outline_bottom_right:
-      key.tags:
-        - helper
-      anchor:
-        - ref: mcu_cover_bottom_right
-          shift: [-0.63,0]
-    plate_additional_outline_bottom_left:
-      key.tags:
-        - helper
-      anchor:
-        - aggregate:
-            method: intersect
-            parts:
-              - ref: plate_additional_outline_top
-              - ref: plate_additional_outline_bottom_right
 
     screw_pcb_left_top:
       key.tags:
@@ -467,10 +506,6 @@ outlines:
       size: [kx, ky]
       operation: stack
     - what: rectangle
-      where: [key_1_5u]
-      size: [kx*1.5, ky]
-      operation: stack
-    - what: rectangle
       where: /key/
       size: [kcow, kcoh]
       operation: stack
@@ -483,10 +518,6 @@ outlines:
       fillet: 2
       where: [key]
       size: [keycw, keych]
-    - what: rectangle
-      fillet: 2
-      where: [key_1_5u]
-      size: [keycw*1.5, keych]
   _hex_outline:
     - what: rectangle
       where: [key]
@@ -507,55 +538,24 @@ outlines:
     - what: rectangle
       where: /key/
       size: [kcow, kcoh]
-  _backplate_additional_outline:
+  board_left:
     - what: polygon
       points:
-        - ref: mcu_cover_top_left
-        - ref: mcu_cover_top_right
-        - ref: mcu_cover_bottom_right
-        - ref: mcu_cover_bottom_left
-  _finger_outline:
-    - what: polygon
-      points:
-        - ref: finger_outer_num
-          shift: [-ks * 0.47 +0.01, kp * 0.475 -0.015]
-        - ref: finger_ring_num
-          shift: [-ks * 0.47 +0.01, kp * 0.225 -0.014]
-        - ref: finger_ring_num
-          shift: [-ks * 0.47 +0.01, kp * 0.475 -0.015]
-        - ref: finger_middle_num
-          shift: [-ks * 0.47 +0.01, kp * 0.35 -0.015]
-        - ref: finger_middle_num
-          shift: [-ks * 0.47 +0.01, kp * 0.468 -0.005]
-        - ref: finger_middle_num
-          shift: [ks * 0.478, kp * 0.468 -0.005]
-        - ref: finger_middle_num
-          shift: [ks * 0.478, kp * 0.35 -0.015]
-        - ref: finger_index_num
-          shift: [ks * 0.478, kp * 0.475 -0.015]
-        - ref: finger_index_num
-          shift: [ks * 0.478, kp * 0.34 +0.052]
-        - ref: finger_inner_num
-          shift: [ks * 0.478, kp * 0.468 -0.005]
-        - ref: plate_additional_outline_top
-        - ref: plate_additional_outline_bottom_left
-        - ref: plate_additional_outline_bottom_right
-        - ref: plate_outline_bottom_4
-        - ref: plate_outline_bottom_3
-        - ref: plate_outline_bottom_2
-        - ref: plate_outline_bottom_1
+        - ref: thumb_far_fan
+          shift: [12,-12]
+        # - ref: finger_middle_bottom
+        #   shift: [0,-25]
         - ref: finger_outer_bottom
-          shift: [-0.5 ks, -0.5 kp]
-  _plate_outline:
-    - what: outline
-      name: _finger_outline
-    - what: polygon
-      points:
-        - ref: plate_additional_outline_top
-        - ref: mcu_cover_top_right
-        - ref: mcu_cover_bottom_right
-        - ref: plate_additional_outline_bottom_right
-        - ref: plate_additional_outline_bottom_left
+          shift: [-12,-12]
+        - ref: finger_outer_num
+          shift: [-12,12]
+        - ref: finger_middle_num
+          shift: [0,15]
+        - ref: finger_inner_num
+          shift: [42,6]
+        - ref: finger_inner_bottom
+          shift: [42,-28]
+      fillet: 8
   _screws:
     - what: circle
       where: /screw_pcb/
@@ -571,57 +571,10 @@ outlines:
   _controller_overlay_screws:
     - what: circle
       where: /screw_mcu/
-      radius: screw_radius
-  _backplate_outline:
-    - what: outline
-      name: _plate_outline
-    - what: outline
-      name: _backplate_additional_outline
-      operation: add
-  _bottom_case_superlight_inner_outline:
-    - what: outline
-      name: _backplate_outline
-      expand:  -2 * case_wall_thickness
-      fillet: 0.5
-      joints: 1
-  _bottom_case_outer_outline:
-    - what: outline
-      name: _backplate_outline
-      expand: case_wall_thickness + pcb_to_case_wall_tolerance
-      fillet: 0.5
-      joints: 1
-  _bottom_case_inner_outline:
-    - what: outline
-      name: _backplate_outline
-      expand: pcb_to_case_wall_tolerance
-      fillet: 0.5
-      joints: 1
-  _bottom_case_walls:
-    - what: outline
-      name: _bottom_case_outer_outline
-    - what: outline
-      name: _bottom_case_inner_outline
-      operation: subtract
-  _mcu_wall_cutout:
-    - what: rectangle
-      where: finger_inner_top
-      size: [8,40 + pcb_to_case_wall_tolerance * 2 + case_wall_thickness * 2]
-      adjust:
-        shift: [19.704 - 1.25 + pcb_to_case_wall_tolerance / 2 + case_wall_thickness, 0]
-  backplate:
-    - what: outline
-      name: _backplate_outline
-      fillet: fillet_radius
-    - what: outline
-      name: _screws
-      operation: subtract
-  _pcb_outline:
-    - what: outline
-      name: _backplate_outline
-      fillet: fillet_radius
+      radius: screw_head_radius
   pcb:
     - what: outline
-      name: _pcb_outline
+      name: board_left
     - what: outline
       name: _spacers
       operation: subtract
@@ -630,7 +583,7 @@ outlines:
       operation: subtract
   _frontplate_outline:
     - what: outline
-      name: _finger_outline
+      name: board_left
       fillet: fillet_radius
     - what: outline
       name: _switch_cutouts
@@ -641,91 +594,14 @@ outlines:
     - what: outline
       name: _screws
       operation: subtract
-  _controller_overlay_outline:
-    - what: outline
-      name: _backplate_additional_outline
-      fillet: fillet_radius
-  controller_overlay:
-    - what: outline
-      name: _controller_overlay_outline
-    - what: outline
-      name: _controller_overlay_screws
-      operation: subtract
-  preview:
-    - what: outline
-      name: backplate
-    - what: outline
-      name: pcb
-      operation: stack
-    - what: outline
-      name: frontplate
-      operation: stack
-    - what: outline
-      name: controller_overlay
-      operation: stack
-    - what: outline
-      name: _keycap_outlines
-      operation: stack
-    - what: outline
-      name: _bottom_case_walls
-      operation: stack
-    - what: outline
-      name: _bottom_case_outer_outline
-      operation: stack
-    - what: outline
-      name: _bottom_case_superlight_inner_outline
-      operation: stack
 
 pcbs:
-  backplate:
+  toomanykeys:
     template: kicad8
-    outlines:
+    outlines: 
       main:
-        outline: backplate
+        outline: board_left      
     footprints:
-      m2_screws:
-        what: mounting_hole_npth
-        where: /screw_pcb/
-        params:
-          hole_size: screw_diameter
-          hole_drill: screw_diameter
-
-  frontplate:
-    template: kicad8
-    outlines:
-      main:
-        outline: frontplate
-    footprints:
-      m2_screws:
-        what: mounting_hole_npth
-        where: /screw_pcb/
-        params:
-          hole_size: screw_diameter
-          hole_drill: screw_diameter
-
-  controller_overlay:
-    template: kicad8
-    outlines:
-      main:
-        outline: controller_overlay
-    footprints:
-      m2_screws:
-        what: mounting_hole_npth
-        where: /screw_mcu/
-        params:
-          hole_size: screw_diameter
-          hole_drill: screw_diameter
-
-  _toomanykeys_baseline:
-    template: kicad8
-    outlines: &basepcb_outlines
-      main:
-        outline: _pcb_outline
-      # keycaps:
-      #   outline: _keycap_outlines
-      #   layer: Dwgs.User
-        
-    footprints: &basepcb_footprints
       m2_screws:
         what: mounting_hole_npth
         where: /screw_mcu/
@@ -744,7 +620,7 @@ pcbs:
         where: /key/
         params:
           from: "{{column_net}}"
-          to: "{{colrow}}"
+          to: "{{name}}"
           reversible: false
           side: 'F'
           large_p1: false
@@ -759,64 +635,31 @@ pcbs:
           key_3dmodel_filename: '\${MODELS}/PG1316S.STEP'
         adjust:
           rotate: switch_rotation
+      roller:
+        what: rotary_encoder_ec11_ec12
+        where: roller
+        params:
+          S1: "{{column_net}}"
+          S2: "{{name}}"
+          A: ENC_UP
+          B: GND
+          C: ENC_DN
 
-      # diodes: #temp, replace with BAV-70
-      #   what: diode_tht_sod123
-      #   where: /key/
-      #   params:
-      #     from: "{{colrow}}"
-      #     to: "{{row_net}}"
-      #     include_tht: false
-      #     reversible: false
-      #     side: F
-      #   adjust:
-      #     shift: [-1 * horizontal_diode_shift,vertical_diode_shift]
-      #     rotate: 90 + diode_rotation
-
+      bav70:
+        what: diode_bav70_larssont
+        where: /diode/
+        params:
+          A1: "{{A1}}"
+          A2: "{{A2}}"
+          C: R1
       mcu:
-        what: mcu_nice_nano
+        what: mcu_xiao_plus_smd
         where: finger_inner_num
         params:
-          P0: DAT
-          P1: LED
-          P21: C0
-          P20: C1
-          P19: C2
-          P18: C3
-          P15: C4
-          P14: C5
-          P16: LED_SW
-          P2: SDA
-          P3: SCL
-          P4: CS
-          P5: R0
-          P6: R1
-          P7: R2
-          P8: R3
-          reversible: false
-          show_silk_labels: true
-          show_instructions: false
+          side: F
         adjust:
-          shift: [20,-10]
-      
-      jlcpcb_order_number_text:
-        what: utility_text
-        where: finger_ring_bottom
-        params:
-          text: JLCJLCJLCJLC
-          reversible: true
-        adjust:
-          shift: [0, -0.65 kp]
-  
-  toomanykeys:
-    template: kicad8
-    
-    outlines:
-      <<: *basepcb_outlines
-        
-    footprints:
-      <<: *basepcb_footprints
-      
+          shift: [22,-2]
+          rotate: 81.3
       nice_view:
         what: display_nice_view
         where: finger_inner_num
@@ -824,8 +667,7 @@ pcbs:
           MOSI: SDA
           SCK: SCL
         adjust:
-          shift: [20,-11.5]
-      
+          shift: [20,-12]      
       on_off_switch:
         what: power_switch_smd_side
         where: finger_inner_bottom
@@ -833,8 +675,7 @@ pcbs:
           from: BAT_P
           to: RAW
         adjust:
-          shift: [28,0]
-      
+          shift: [39,0]
       reset_switch:
         what: reset_switch_smd_side
         where: finger_inner_bottom
@@ -842,20 +683,18 @@ pcbs:
           from: GND
           to: RST
         adjust:
-          shift: [28,-12]
-          rotate: -90
-      
+          shift: [39,-12]
+          rotate: -90      
       battery_connector:  
         what: battery_connector_jst_ph_2
-        where: finger_inner_bottom
+        where: finger_inner_top
         params:
           BAT_P: BAT_P
           BAT_N: GND
           include_courtyard: true
         adjust:
-          shift: [28,23]
-          rotate: -90
-
+          shift: [30,0]
+          rotate: 0
       per_key_leds:
         what: led_ws2812b_2020
         where: /key/
@@ -867,45 +706,21 @@ pcbs:
         adjust:
           shift: [led_pos_x, led_pos_y]
           rotate: led_rotation
-
       load_switch:
         what: led_load_switch
-        where: finger_inner_home
+        where: finger_inner_top
         params:
           P1: LED_SW
-          P2: RAW
+          P2: 5V
           P3: LED_PWR
         adjust:
-          shift: [13,1]
-          rotate: 90
-
-cases:
-  toomanykeys_bottom_tray:
-    - what: outline
-      name: _bottom_case_walls
-      extrude: bottom_plate_thickness + internal_distance_between_plates + top_plate_thickness
-      shift: [-75,0,0]
-    - what: outline
-      name: _mcu_wall_cutout
-      extrude: 2.2
-      shift: [-75, 0, bottom_plate_thickness]
-      operation: subtract
-    - what: outline
-      name: _bottom_case_outer_outline
-      extrude: bottom_plate_thickness
-      shift: [-75,0,0]
-    # - what: outline
-    #   name: _bottom_case_superlight_inner_outline
-    #   extrude: bottom_plate_thickness
-    #   shift: [-75,0,0]
-    #   operation: subtract
-    # - what: outline
-    #   name: _hex_outline
-    #   extrude: bottom_plate_thickness
-    #   shift: [-75,0,0]
-    #   operation: subtract
-    - what: outline
-      name: _screws
-      extrude: bottom_plate_thickness
-      shift: [-75,0,0]
-      operation: subtract
+          shift: [19,3]
+          rotate: 0
+      jlcpcb_order_number_text:
+        what: utility_text
+        where: finger_ring_bottom
+        params:
+          text: JLCJLCJLCJLC
+          reversible: true
+        adjust:
+          shift: [0, -0.65 kp]
