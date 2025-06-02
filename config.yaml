@@ -538,6 +538,59 @@ outlines:
     - what: rectangle
       where: /key/
       size: [kcow, kcoh]
+  bessie:
+    - what: path
+      segments:
+        # NW
+        - type: line
+          points:
+            - ref: finger_outer_bottom
+              shift: [-12, -12]
+            - ref: finger_outer_num
+              shift: [-12, 12]
+        # N
+        - type: bezier
+          points:
+            - ref: finger_ring_num
+              shift: [0,16]
+            - ref: finger_middle_num
+              shift: [12, 10]
+        # NE
+        - type: line
+          points:
+            - ref: finger_index_num
+              shift: [12, 12]
+            - ref: finger_inner_num
+              shift: [30,10]
+        - type: bezier
+          points:
+            - ref: finger_inner_num
+              shift: [40,6]
+            - ref: finger_inner_top
+              shift: [42,0]
+        
+        # E
+        - type: bezier
+          points:
+            - ref: finger_inner_home
+              shift: [36, -12]
+            - ref: thumb_far_fan
+              shift: [14, 12]
+        # SW
+        - type: line
+          points:
+            - ref: thumb_far_fan
+              shift: [12, -12]
+            - ref: thumb_near_fan
+              shift: [-12, -12]
+        # SE
+        - type: bezier
+          points:
+            - ref: finger_middle_bottom
+              shift: [12, -12]
+            - ref: finger_outer_bottom
+              shift: [-12, -12]
+      fillet: 2
   board_left:
     - what: polygon
       points:
@@ -568,18 +621,11 @@ outlines:
     - what: circle
       where: /screw_pcb/
       radius: spacer_radius
-  _controller_overlay_screws:
-    - what: circle
-      where: /screw_mcu/
-      radius: screw_head_radius
   pcb:
     - what: outline
       name: board_left
     - what: outline
       name: _spacers
-      operation: subtract
-    - what: outline
-      name: _controller_overlay_screws
       operation: subtract
   _frontplate_outline:
     - what: outline
@@ -600,14 +646,9 @@ pcbs:
     template: kicad8
     outlines: 
       main:
-        outline: board_left      
+        #outline: board_left
+        outline: bessie
     footprints:
-      m2_screws:
-        what: mounting_hole_npth
-        where: /screw_mcu/
-        params:
-          hole_size: screw_diameter
-          hole_drill: screw_diameter
       m2_spacers:
         what: mounting_hole_npth 
         where: /screw_pcb/
@@ -636,7 +677,7 @@ pcbs:
         adjust:
           rotate: switch_rotation
       roller:
-        what: rotary_encoder_ec11_ec12
+        what: roller_encoder_ckw12
         where: roller
         params:
           S1: "{{column_net}}"
