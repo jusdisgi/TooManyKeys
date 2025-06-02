@@ -1,3 +1,27 @@
+//CKW12 DIY Roller Encoder Footprint
+//author: @huntercook https://github.com/jusdisgi
+//made with kicad2ergogen https://kicad2ergogen.genteure.com/
+//
+//Based on CKW12 design by Kumamuk available here: https://github.com/kumamuk-git/CKW12
+//Adapted to be integrated into the main PCB instead of on a daughter board.
+//
+// All 3D printed components are available at: https://github.com/kumamuk-git/CKW12/tree/main/3dmodel
+//
+// Components needed:
+// 3D printed housing
+// 3D printed wheel 
+// 3D printed stem
+// ALPS SKQYACE010, SKQYPCE010 or similar 2.5mm high tactile switch: https://www.lcsc.com/datasheet/lcsc_datasheet_2409300803_ALPSALPINE-SKQYPCE010_C262422.pdf
+// ALPS EC05E1220202 side-mount rotary encoder: https://www.lcsc.com/datasheet/lcsc_datasheet_2409301732_ALPSALPINE-EC05E1220202_C202421.pdf
+//
+// Parameters:
+// side: F (default) for front or B for back
+// S1: net for switch leg. Default is blank
+// S2: net for switch leg. Default is blank
+// A: net for rotary. default is RE_A
+// B: net for ground pad. default is GND
+// C: net for rotary. default is RE_B
+
 module.exports = {
   params: {
     designator: 'RE',
