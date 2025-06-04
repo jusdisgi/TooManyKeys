@@ -309,8 +309,8 @@ points:
             spread: ks + 1
           rows:
             fan.key:
-              led_prev: LED_START #Goes to MCU, this is LED_0
-              led_next: LED_1
+              led_prev: LED_DATA_5V #From logic level shifter
+              led_next: LED_1 #This was LED_0 the next key is LED_1
       rows:
         fan:
           row_net: R3
@@ -325,7 +325,7 @@ points:
         row_net: R3
       anchor: 
         - ref: thumb_mid_fan
-          shift: [6,20]
+          shift: [7,22]
           rotate: 90  
 
 
@@ -336,101 +336,115 @@ points:
           diode
         A1: finger_outer_num
         A2: finger_pinky_num
+        C: R0
       anchor: &bav70anchor
-        - ref: finger_inner_top
-          shift: [14,-1]
+        - ref: finger_middle_bottom
+          shift: [-23,-17]
           rotate: -90
     bav70_num2:
       <<:  *bav70proto
       key.A1: finger_ring_num
       key.A2: finger_middle_num
+      key.C: R0
       anchor:
         <<: *bav70anchor
-        shift: [20,-1]
+        shift: [-17,-17]
     bav70_num3:
       <<:  *bav70proto
       key.A1: finger_index_num
       key.A2: finger_inner_num
+      key.C: R0
       anchor:
         <<: *bav70anchor
-        shift: [26,-1]
+        shift: [-11,-17]
     bav70_top1:
       <<:  *bav70proto
       key.A1: finger_outer_top
-      key.A2: finger_outer_top
+      key.A2: finger_pinky_top
+      key.C: R1
       anchor:
         <<: *bav70anchor
-        shift: [14,-5]
+        shift: [-5,-17]
     bav70_top2:
       <<:  *bav70proto
       key.A1: finger_ring_top
       key.A2: finger_middle_top
+      key.C: R1
       anchor:
         <<: *bav70anchor
-        shift: [20,-5]
+        shift: [1,-17]
     bav70_top3:
       <<:  *bav70proto
       key.A1: finger_index_top
       key.A2: finger_inner_top
+      key.C: R1
       anchor:
         <<: *bav70anchor
-        shift: [26,-5]
+        shift: [7,-17]
     bav70_home1:
       <<:  *bav70proto
       key.A1: finger_outer_home
-      key.A2: finger_outer_home
+      key.A2: finger_pinky_home
+      key.C: R2
       anchor:
         <<: *bav70anchor
-        shift: [14,-14]
+        shift: [7,-24]
     bav70_home2:
       <<:  *bav70proto
       key.A1: finger_ring_home
       key.A2: finger_middle_home
+      key.C: R2
       anchor:
         <<: *bav70anchor
-        shift: [20,-14]
+        shift: [-23,-24]
     bav70_home3:
       <<:  *bav70proto
       key.A1: finger_index_home
       key.A2: finger_inner_home
+      key.C: R2
       anchor:
         <<: *bav70anchor
-        shift: [26,-14]
+        shift: [-17,-24]
     bav70_bottom1:
       <<:  *bav70proto
       key.A1: finger_outer_bottom
-      key.A2: finger_outer_bottom
+      key.A2: finger_pinky_bottom
+      key.C: R3
       anchor:
         <<: *bav70anchor
-        shift: [14,-18]
+        shift: [-11,-24]
     bav70_bottom2:
       <<:  *bav70proto
       key.A1: finger_ring_bottom
       key.A2: finger_middle_bottom
+      key.C: R3
       anchor:
         <<: *bav70anchor
-        shift: [20,-18]
+        shift: [-5,-24]
     bav70_bottom3:
       <<:  *bav70proto
       key.A1: finger_index_bottom
       key.A2: finger_inner_bottom
+      key.C: R3
       anchor:
         <<: *bav70anchor
-        shift: [26,-18]
+        shift: [1,-24]
     bav70_fan1:
       <<:  *bav70proto
-      key.A1: thumb_near_fan
-      key.A2: thumb_mid_fan
+      key.A1: roller
+      key.A2: thumb_near_fan
+      key.C: R4
       anchor:
         <<: *bav70anchor
-        shift: [32,-1]
+        shift: [13,-17]
     bav70_fan2:
       <<:  *bav70proto
-      key.A1: thumb_far_fan
-      key.A2: roller
+      key.A1: thumb_mid_fan
+      key.A2: thumb_far_fan
+      key.C: R4
       anchor:
         <<: *bav70anchor
-        shift: [32,-5]
+        shift: [13,-24]
 
 
     screw_pcb_left_top:
@@ -439,35 +453,63 @@ points:
         - screw
       anchor:
         - ref: finger_outer_num
-          shift: [-0.5 ks, 0.5 kp]
+          shift: [10, 12]
     screw_pcb_left_bottom:
       key.tags:
         - helper
         - screw
       anchor:
         - ref: finger_pinky_bottom
-          shift: [-0.5 ks, -0.5 kp]
-    screw_pcb_right_top:
+          shift: [-12,-14]
+    screw_pcb_left_mid_top:
+      key.tags:
+        - helper
+        - screw
+      anchor:
+        - ref: finger_middle_num
+          shift: [-13, 9]
+    screw_pcb_right_mid_top:
+      key.tags:
+        - helper
+        - screw
+      anchor:
+        - ref: finger_middle_num
+          shift: [13, 9]
+    screw_pcb_rightish_top:
       key.tags:
         - helper
         - screw
       anchor:
         - ref: finger_inner_num
-          shift: [0.5 ks, 0.5 kp]
+          shift: [13, 6]
+    screw_pcb_right_top:
+      key.tags:
+        - helper
+        - screw
+      anchor:
+        - ref: finger_inner_top
+          shift: [40, 6]
     screw_pcb_thumb_left:
       key.tags:
         - helper
         - screw
       anchor:
         - ref: thumb_near_fan
-          shift: [-0.5 ks, -0.5 kp]
+          shift: [-15, -10]
     screw_pcb_thumb_right:
       key.tags:
         - helper
         - screw
       anchor:
         - ref: thumb_far_fan
-          shift: [0.5 ks, -0.5 kp]
+          shift: [0, -12]
+    screw_pcb_thumb_top:
+      key.tags:
+        - helper
+        - screw
+      anchor:
+        - ref: thumb_far_fan
+          shift: [10,12]
     screw_mcu_cover_left:
       key.tags:
         - helper
@@ -538,77 +580,81 @@ outlines:
     - what: rectangle
       where: /key/
       size: [kcow, kcoh]
-  bessie:
-    - what: path
-      segments:
-        # NW
-        - type: line
-          points:
-            - ref: finger_outer_bottom
-              shift: [-12, -12]
-            - ref: finger_outer_num
-              shift: [-12, 12]
-        # N
-        - type: bezier
-          points:
-            - ref: finger_ring_num
-              shift: [0,16]
-            - ref: finger_middle_num
-              shift: [12, 10]
-        # NE
-        - type: line
-          points:
-            - ref: finger_index_num
-              shift: [12, 12]
-            - ref: finger_inner_num
-              shift: [30,10]
-        - type: bezier
-          points:
-            - ref: finger_inner_num
-              shift: [40,6]
-            - ref: finger_inner_top
-              shift: [42,0]
+  # bessie:
+  #   - what: path
+  #     segments:
+  #       # NW
+  #       - type: line
+  #         points:
+  #           - ref: finger_outer_bottom
+  #             shift: [-12, -12]
+  #           - ref: finger_outer_num
+  #             shift: [-12, 12]
+  #       # N
+  #       - type: bezier
+  #         points:
+  #           - ref: finger_ring_num
+  #             shift: [0,16]
+  #           - ref: finger_middle_num
+  #             shift: [12, 10]
+  #       # NE
+  #       - type: line
+  #         points:
+  #           - ref: finger_index_num
+  #             shift: [12, 12]
+  #           - ref: finger_inner_num
+  #             shift: [30,10]
+  #       - type: bezier
+  #         points:
+  #           - ref: finger_inner_num
+  #             shift: [40,6]
+  #           - ref: finger_inner_top
+  #             shift: [42,0]
         
-        # E
-        - type: bezier
-          points:
-            - ref: finger_inner_home
-              shift: [36, -12]
-            - ref: thumb_far_fan
-              shift: [14, 12]
-        # SW
-        - type: line
-          points:
-            - ref: thumb_far_fan
-              shift: [12, -12]
-            - ref: thumb_near_fan
-              shift: [-12, -12]
-        # SE
-        - type: bezier
-          points:
-            - ref: finger_middle_bottom
-              shift: [12, -12]
-            - ref: finger_outer_bottom
-              shift: [-12, -12]
-      fillet: 2
+  #       # E
+  #       - type: bezier
+  #         points:
+  #           - ref: finger_inner_home
+  #             shift: [36, -12]
+  #           - ref: thumb_far_fan
+  #             shift: [14, 12]
+  #       # SW
+  #       - type: line
+  #         points:
+  #           - ref: thumb_far_fan
+  #             shift: [12, -12]
+  #           - ref: thumb_near_fan
+  #             shift: [-12, -12]
+  #       # SE
+  #       - type: bezier
+  #         points:
+  #           - ref: finger_middle_bottom
+  #             shift: [12, -12]
+  #           - ref: finger_outer_bottom
+  #             shift: [-12, -12]
+  #     fillet: 2
   board_left:
     - what: polygon
       points:
         - ref: thumb_far_fan
-          shift: [12,-12]
+          shift: [12,-10]
         # - ref: finger_middle_bottom
         #   shift: [0,-25]
         - ref: finger_outer_bottom
-          shift: [-12,-12]
+          shift: [-12,-10]
         - ref: finger_outer_num
           shift: [-12,12]
         - ref: finger_middle_num
-          shift: [0,15]
+          shift: [-12,12]
+        - ref: finger_middle_num
+          shift: [12,12]
+        # - ref: finger_middle_num
+        #   shift: [0,14]
         - ref: finger_inner_num
-          shift: [42,6]
+          shift: [45,6]
         - ref: finger_inner_bottom
-          shift: [42,-28]
-      fillet: 8
+          shift: [45,-23.45]
+      fillet: 6
   _screws:
     - what: circle
       where: /screw_pcb/
@@ -646,15 +692,15 @@ pcbs:
     template: kicad8
     outlines: 
       main:
-        #outline: board_left
-        outline: bessie
+        outline: board_left
+        #outline: bessie
     footprints:
-      m2_spacers:
+      m2_screwholes:
         what: mounting_hole_npth 
         where: /screw_pcb/
         params:
-          hole_size: spacer_diameter
-          hole_drill: spacer_diameter
+          hole_size: screw_diameter
+          hole_drill: screw_diameter
 
       key_switches:
         what: *switch_footprint
@@ -669,10 +715,11 @@ pcbs:
           square_p2: true
           shift_p2: false
           small_mp: false
-          pad_vias: true
+          pad_vias: false
           pad_via_size: 0.4
-          mp_vias: true
+          mp_vias: false
           mp_via_size: 0.4
+          mp_gnd: true
           key_3dmodel_filename: '\${MODELS}/PG1316S.STEP'
         adjust:
           rotate: switch_rotation
@@ -682,10 +729,9 @@ pcbs:
         params:
           S1: "{{column_net}}"
           S2: "{{name}}"
-          A: ENC_UP
+          A: ROLLUP
           B: GND
-          C: ENC_DN
-
+          C: ROLLDN
       bav70:
         what: diode_bav70_larssont
         where: /diode/
@@ -694,29 +740,55 @@ pcbs:
           A2: "{{A2}}"
           C: R1
       mcu:
-        what: mcu_xiao_plus_smd
+        what: mcu_nice_nano
         where: finger_inner_num
         params:
           side: F
+          include_extra_pins: true
+          RAW: 'RAW'
+          GND: 'GND'
+          RST: 'RST'
+          VCC: '3V3'
+          P21: 'R0'
+          P20: 'R1'
+          P19: 'R2'
+          P18: 'R3'
+          P15: 'R4'
+          P14: 'C3'
+          P16: 'C4'
+          P10: 'C5'
+          P1: 'ROLLUP'
+          P0: 'ROLLDN'
+          P2: 'LED_DATA_3V3'
+          P3: 'LED_EN'
+          P4: 'LCD_DIN'
+          P5: 'LCD_CLK'
+          P6: 'LCD_DC'
+          P7: 'LCD_BL'
+          P8: 'C0'
+          P9: 'C1'
+          P101: 'LCD_CS'
+          P102: 'LCD_RST'
+          P107: 'C2'
         adjust:
-          shift: [22,-2]
-          rotate: 81.3
-      nice_view:
-        what: display_nice_view
-        where: finger_inner_num
-        params:
-          MOSI: SDA
-          SCK: SCL
-        adjust:
-          shift: [20,-12]      
+          shift: [29,-8.5]
+          rotate: -8
+      # apple_watch:
+      #   what: display_nice_view
+      #   where: finger_inner_num
+      #   params:
+      #     MOSI: SDA
+      #     SCK: SCL
+      #   adjust:
+      #     shift: [20,-12]
       on_off_switch:
         what: power_switch_smd_side
         where: finger_inner_bottom
         params:
-          from: BAT_P
-          to: RAW
+          from: RAW
+          to: BAT_P
         adjust:
-          shift: [39,0]
+          shift: [43,-8]
       reset_switch:
         what: reset_switch_smd_side
         where: finger_inner_bottom
@@ -724,18 +796,19 @@ pcbs:
           from: GND
           to: RST
         adjust:
-          shift: [39,-12]
+          shift: [43,5]
           rotate: -90      
       battery_connector:  
         what: battery_connector_jst_ph_2
-        where: finger_inner_top
+        where: finger_inner_bottom
         params:
+          side: B
           BAT_P: BAT_P
           BAT_N: GND
           include_courtyard: true
         adjust:
-          shift: [30,0]
-          rotate: 0
+          shift: [40,-18]
+          rotate: 180
       per_key_leds:
         what: led_ws2812b_2020
         where: /key/
@@ -747,21 +820,14 @@ pcbs:
         adjust:
           shift: [led_pos_x, led_pos_y]
           rotate: led_rotation
-      load_switch:
-        what: led_load_switch
-        where: finger_inner_top
-        params:
-          P1: LED_SW
-          P2: 5V
-          P3: LED_PWR
-        adjust:
-          shift: [19,3]
-          rotate: 0
-      jlcpcb_order_number_text:
-        what: utility_text
-        where: finger_ring_bottom
-        params:
-          text: JLCJLCJLCJLC
-          reversible: true
-        adjust:
-          shift: [0, -0.65 kp]
+    # Hoping we don't need this...
+      # load_switch:
+      #   what: led_load_switch
+      #   where: finger_inner_home
+      #   params:
+      #     P1: LED_SW
+      #     P2: 5V
+      #     P3: LED_PWR
+      #   adjust:
+      #     shift: [15,-2.5]
+      #     rotate: -90

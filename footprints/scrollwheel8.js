@@ -1,3 +1,10 @@
+// This ugly hack promulgated by @huntercook https://github.con/jusdisgi
+//
+// Seriously this file is just the scrollwheel footprint from the original ergogen collection
+// with the arcs deleted so that it will work with the kicad8 footprint template.
+// I believe someone smarter than me could convert the arcs instead.
+//
+//
 // Panasonic EVQWGD001 horizontal rotary encoder
 //
 //   __________________

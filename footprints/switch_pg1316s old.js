@@ -1,9 +1,7 @@
-// Kailh PG1316S "Ultra Low Profile" keyswitch ergogen footprint
-// Author: Hunter Cook @huntercook https://github.com/jusdisgi
-// Canonical location: https://github.com/jusdisgi/ergogen-footprints/blob/main/switch_pg1316s.js
-//
+// Ergogen footprint for Kailh PG1316S "Ultra Low Profile" keyswitches
+// By Hunter Cook @huntercook https://github.com/jusdisgi
 // Based on KiCad Footprints by Mike Holscher available at: https://github.com/mikeholscher/zmk-config-mikefive/blob/main/files/footprint-and-cad/
-//
+
 // Nets:
 //    from: corresponds to pin 1
 //    to: corresponds to pin 2
@@ -137,16 +135,10 @@ fp.push(`(fp_poly (pts (xy ${(flip ? -3.8 : 3.8)} -3.5) (xy ${(flip ? -3.8 : 3.8
 //fp.push(`(fp_rect (start -0.55 1.65) (end -2.55 3.65) (stroke (width 0.1) (type default)) (fill no) (layer "B.SilkS") )`);
 
 
-// Holes for stabilizing legs, Front Side (side = 'F' and/or reversible = true)
+// Edge Cuts, Front Side (side = 'F' and/or reversible = true)
 if (frontside) {
-
-  // These were the originals from Mike's kicad footprint. Changed to drilled holes to improve fabrication accuracy.
-  // fp.push(`(fp_circle (center -5.8 2.75) (end -5.3 2.75) (stroke (width 0.1) (type default)) (fill none) (layer "Edge.Cuts"))`);
-  // fp.push(`(fp_circle (center 5.8 -2.75) (end 6.4 -2.75) (stroke (width 0.1) (type default)) (fill none) (layer "Edge.Cuts"))`);
-
-  fp.push(`(pad "" np_thru_hole circle (at -5.8 2.75) (size 1 1) (drill 1) (layers "*.Cu" "*.Mask"))`);
-  fp.push(`(pad "" np_thru_hole circle (at 5.8 -2.75) (size 1.2 1.2) (drill 1.2) (layers "*.Cu" "*.Mask"))`);
-  
+  fp.push(`(fp_circle (center -5.8 2.75) (end -5.3 2.75) (stroke (width 0.1) (type default)) (fill none) (layer "Edge.Cuts"))`);
+  fp.push(`(fp_circle (center 5.8 -2.75) (end 6.4 -2.75) (stroke (width 0.1) (type default)) (fill none) (layer "Edge.Cuts"))`);
 
 //Pad 1, Front Side; default net = 'from'
 //If/elseif/else for pad config; inline conditionals for via config
@@ -175,14 +167,10 @@ if (frontside) {
   fp.push(`(pad "3" smd roundrect (at ${p.small_mp ? "6.05 5.875" : "6.35 6" } ${p.r}) (size ${p.small_mp ? "1.4 1.75" : "2 2"}) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) ${p.mp_gnd ? `${p.mp_net}` : ''})`);
 }
 
-// Holes for stabilizing legs, Back Side (side = 'B' and/or reversible = true)
+// Edge Cut, Back Side (side = 'B' and/or reversible = true)
 if (backside) {
-  // fp.push(`(fp_circle (center -5.8 -2.75) (end -5.2 -2.75) (stroke (width 0.1) (type default)) (fill none) (layer "Edge.Cuts"))`);
-  // fp.push(`(fp_circle (center 5.8 2.75) (end 6.3 2.75) (stroke (width 0.1) (type default)) (fill none) (layer "Edge.Cuts"))`);
-
-  fp.push(`(pad "" np_thru_hole circle (at -5.8 -2.75) (size 1 1) (drill 1) (layers "*.Cu" "*.Mask"))`);
-  fp.push(`(pad "" np_thru_hole circle (at 5.8 2.75) (size 1.2 1.2) (drill 1.2) (layers "*.Cu" "*.Mask"))`);
-
+  fp.push(`(fp_circle (center -5.8 -2.75) (end -5.2 -2.75) (stroke (width 0.1) (type default)) (fill none) (layer "Edge.Cuts"))`);
+  fp.push(`(fp_circle (center 5.8 2.75) (end 6.3 2.75) (stroke (width 0.1) (type default)) (fill none) (layer "Edge.Cuts"))`);
 
 //Pad 1, Back Side; default net = 'from'
   if (p.large_p1) {
