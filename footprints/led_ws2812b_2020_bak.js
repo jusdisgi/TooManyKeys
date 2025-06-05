@@ -1,40 +1,11 @@
-// NeoPixel LED WS2812B-2020 ergogen footprint
-// Author: Hunter Cook @huntercook https://github.com/jusdisgi
-// Canonical location: https://github.com/jusdisgi/ergogen-footprints/blob/main/led_ws2812b_2020.js
-//
-// created with kicad2ergogen: https://kicad2ergogen.genteure.com/
-//
-// Component datasheet: https://www.lcsc.com/datasheet/lcsc_datasheet_2412051755_Worldsemi-WS2812B-2020_C965555.pdf
-//
-// Nets/Parameters
-//
-// side: F (default) for Front, B for Back
-// 
-// P1: Power input. Default net "VCC"
-// P2: Data input. Default net undefined
-// P3: Ground pin. Default net "GND"
-// P4: Data output. Default net undefined
-
 module.exports = {
   params: {
     designator: 'LED',
     side: 'F',
     P1: { type: 'net', value: 'VCC' },
     P2: { type: 'net', value: undefined },
-    P3: { type: 'net', value: undefined },
-    P4: { type: 'net', value: 'GND' },    
-    p1_via: false,
-    p1_via_size: 0.4, //JLCPCB no-extra-charge minimum 0.4mm
-    p1_via_hole: 0.3, //JLCPCB no-extra-charge minimum 0.3mm
-    p2_via: false,
-    p2_via_size: 0.4,
-    p2_via_hole: 0.3,
-    p3_via: false,
-    p3_via_size: 0.4,
-    p3_via_hole: 0.3,
-    p4_via: false,
-    p4_via_size: 0.4,
-    p4_via_hole: 0.3,
+    P3: { type: 'net', value: 'GND' },
+    P4: { type: 'net', value: undefined },
   },
   body: p => {
     const fp = [];
@@ -58,20 +29,6 @@ fp.push(`(pad "1" smd rect (at ${(flip ? 0.915 : -0.915)} -0.55 ${p.r}) (size 0.
 fp.push(`(pad "2" smd rect (at ${(flip ? 0.915 : -0.915)} 0.55 ${p.r}) (size 0.7 0.7) (layers "${(flip ? "B" : "F")}.Cu" "${(flip ? "B" : "F")}.Mask" "${(flip ? "B" : "F")}.Paste")  ${p.P2})`);
 fp.push(`(pad "3" smd rect (at ${(flip ? -0.915 : 0.915)} 0.55 ${p.r}) (size 0.7 0.7) (layers "${(flip ? "B" : "F")}.Cu" "${(flip ? "B" : "F")}.Mask" "${(flip ? "B" : "F")}.Paste")  ${p.P3})`);
 fp.push(`(pad "4" smd rect (at ${(flip ? -0.915 : 0.915)} -0.55 ${p.r}) (size 0.7 0.7) (layers "${(flip ? "B" : "F")}.Cu" "${(flip ? "B" : "F")}.Mask" "${(flip ? "B" : "F")}.Paste")  ${p.P4})`);
-
-// Pad Vias
-if (p.p1_via) {
-  fp.push(`(pad "1" thru_hole circle (at ${(flip ? 0.915 : -0.915)} -0.55 ${p.r}) (size ${p.p1_via_size} ${p.p1_via_size}) (layers "F.Cu" "B.Cu" "F.Paste" "B.Paste" "F.Mask" "B.Mask") (drill ${p.p1_via_hole}) (thermal_bridge_angle 45) ${p.P1})`);
-}
-if (p.p2_via) {
-  fp.push(`(pad "2" thru_hole circle (at ${(flip ? 0.915 : -0.915)} 0.55 ${p.r}) (size ${p.p2_via_size} ${p.p2_via_size}) (layers "F.Cu" "B.Cu" "F.Paste" "B.Paste" "F.Mask" "B.Mask") (drill ${p.p2_via_hole}) (thermal_bridge_angle 45) ${p.P2})`);
-}
-if (p.p3_via) {
-  fp.push(`(pad "3" thru_hole circle (at ${(flip ? -0.915 : 0.915)} 0.55 ${p.r}) (size ${p.p3_via_size} ${p.p3_via_size}) (layers "F.Cu" "B.Cu" "F.Paste" "B.Paste" "F.Mask" "B.Mask") (drill ${p.p3_via_hole}) (thermal_bridge_angle 45) ${p.P3})`);
-}
-if (p.p4_via) {
-  fp.push(`(pad "4" thru_hole circle (at ${(flip ? -0.915 : 0.915)} -0.55 ${p.r}) (size ${p.p4_via_size} ${p.p4_via_size}) (layers "F.Cu" "B.Cu" "F.Paste" "B.Paste" "F.Mask" "B.Mask") (drill ${p.p4_via_hole}) (thermal_bridge_angle 45) ${p.P4})`);
-}
 
 // Drawings on F.CrtYd
 fp.push(`(fp_line (start ${(flip ? 1.52 : -1.52)} -1.25) (end ${(flip ? 1.52 : -1.52)} 1.25) (stroke (width 0.05) (type solid)) (layer "${(flip ? "B.CrtYd" : "F.CrtYd")}") )`);

@@ -831,7 +831,7 @@ pcbs:
           battery_connector_3dmodel_xyz_rotation: [0, 0, 180]
           battery_connector_3dmodel_xyz_scale: [1, 1, 1]
         adjust:
-          shift: [40.725,-18] #This X value lines up the + pad with the switch contact.
+          shift: [40.265,-18] #This X value lines up the + pad with the switch contact.
           rotate: 180
       per_key_leds:
         what: led_ws2812b_2020
@@ -841,6 +841,10 @@ pcbs:
           P2: 5V
           P3: "{{key.led_next}}" #DOUT
           P4: GND
+          p1_via: true
+          p2_via: true
+          p3_via: true
+          p4_via: false
         adjust:
           shift: [led_pos_x, led_pos_y]
           rotate: led_rotation
