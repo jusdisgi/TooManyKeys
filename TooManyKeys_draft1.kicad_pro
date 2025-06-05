@@ -38,8 +38,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.0,
-          "height": 0.7,
-          "width": 0.7
+          "height": 0.6,
+          "width": 1.325
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -494,7 +494,20 @@
       "version": 4
     },
     "net_colors": null,
-    "netclass_assignments": null,
+    "netclass_assignments": {
+      "Net-(J6-Pin_10)": [
+        "power"
+      ],
+      "Net-(J6-Pin_6)": [
+        "power"
+      ],
+      "Net-(MDBT1-VBUS)": [
+        "power"
+      ],
+      "VBUS": [
+        "power"
+      ]
+    },
     "netclass_patterns": []
   },
   "pcbnew": {

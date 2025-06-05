@@ -1,4 +1,4 @@
-26989488390084741
+26994735470351649
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -105966,12 +105966,33 @@ Varistor VF
 2
 2
 huntercook
+CKW12
+DIY Roller Encoder like that in the roBa keyboard
+EC12
+0
+7
+5
+huntercook
 D_MMBD4148PLM
 SMD Diode Array - 5 Diodes Common Cathode
 
 0
 6
 6
+huntercook
+L_CJIANG_FTC404030S_4.1x4.1x3.0_SMD
+Inductor, CJiang, FTC404030S, 4.1x4.1x3.0mm, (https://www.lcsc.com/datasheet/lcsc_datasheet_2409180941_cjiang--Changjiang-Microelectronics-Tech-FTC404030S2R2MGCA_C39676081.pdf), generated with kicad-footprint-generator gen_inductor.py
+Inductor swpa
+0
+2
+2
+huntercook
+L_Sunlord_SWPA4030S
+Inductor, Sunlord, SWPA4030S, 4.0x4.0x3.0mm, (https://www.sunlordinc.com/UploadFiles/PDF_Cat/20120704094224784.pdf), generated with kicad-footprint-generator gen_inductor.py
+Inductor swpa
+0
+2
+2
 huntercook
 U-DND1616-6
 Diode package, 1 center pad 6 outer

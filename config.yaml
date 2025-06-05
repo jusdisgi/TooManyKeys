@@ -309,7 +309,7 @@ points:
             spread: ks + 1
           rows:
             fan.key:
-              led_prev: LED_DATA_5V #From logic level shifter
+              led_prev: LED_D5V #From logic level shifter
               led_next: LED_1 #This was LED_0 the next key is LED_1
       rows:
         fan:
@@ -334,8 +334,8 @@ points:
         tags:
           helper
           diode
-        A1: finger_outer_num
-        A2: finger_pinky_num
+        A2: finger_outer_num
+        A1: finger_pinky_num
         C: R0
       anchor: &bav70anchor
         - ref: finger_middle_bottom
@@ -343,92 +343,92 @@ points:
           rotate: -90
     bav70_num2:
       <<:  *bav70proto
-      key.A1: finger_ring_num
-      key.A2: finger_middle_num
+      key.A2: finger_ring_num
+      key.A1: finger_middle_num
       key.C: R0
       anchor:
         <<: *bav70anchor
         shift: [-17,-17]
     bav70_num3:
       <<:  *bav70proto
-      key.A1: finger_index_num
-      key.A2: finger_inner_num
+      key.A2: finger_index_num
+      key.A1: finger_inner_num
       key.C: R0
       anchor:
         <<: *bav70anchor
         shift: [-11,-17]
     bav70_top1:
       <<:  *bav70proto
-      key.A1: finger_outer_top
-      key.A2: finger_pinky_top
+      key.A2: finger_outer_top
+      key.A1: finger_pinky_top
       key.C: R1
       anchor:
         <<: *bav70anchor
         shift: [-5,-17]
     bav70_top2:
       <<:  *bav70proto
-      key.A1: finger_ring_top
-      key.A2: finger_middle_top
+      key.A2: finger_ring_top
+      key.A1: finger_middle_top
       key.C: R1
       anchor:
         <<: *bav70anchor
         shift: [1,-17]
     bav70_top3:
       <<:  *bav70proto
-      key.A1: finger_index_top
-      key.A2: finger_inner_top
+      key.A2: finger_index_top
+      key.A1: finger_inner_top
       key.C: R1
       anchor:
         <<: *bav70anchor
         shift: [7,-17]
     bav70_home1:
       <<:  *bav70proto
-      key.A1: finger_outer_home
-      key.A2: finger_pinky_home
-      key.C: R2
-      anchor:
-        <<: *bav70anchor
-        shift: [7,-24]
-    bav70_home2:
-      <<:  *bav70proto
-      key.A1: finger_ring_home
-      key.A2: finger_middle_home
+      key.A2: finger_outer_home
+      key.A1: finger_pinky_home
       key.C: R2
       anchor:
         <<: *bav70anchor
         shift: [-23,-24]
-    bav70_home3:
+    bav70_home2:
       <<:  *bav70proto
-      key.A1: finger_index_home
-      key.A2: finger_inner_home
+      key.A2: finger_ring_home
+      key.A1: finger_middle_home
       key.C: R2
       anchor:
         <<: *bav70anchor
         shift: [-17,-24]
-    bav70_bottom1:
+    bav70_home3:
       <<:  *bav70proto
-      key.A1: finger_outer_bottom
-      key.A2: finger_pinky_bottom
-      key.C: R3
+      key.A2: finger_index_home
+      key.A1: finger_inner_home
+      key.C: R2
       anchor:
         <<: *bav70anchor
         shift: [-11,-24]
-    bav70_bottom2:
+    bav70_bottom1:
       <<:  *bav70proto
-      key.A1: finger_ring_bottom
-      key.A2: finger_middle_bottom
+      key.A2: finger_outer_bottom
+      key.A1: finger_pinky_bottom
       key.C: R3
       anchor:
         <<: *bav70anchor
         shift: [-5,-24]
-    bav70_bottom3:
+    bav70_bottom2:
       <<:  *bav70proto
-      key.A1: finger_index_bottom
-      key.A2: finger_inner_bottom
+      key.A2: finger_ring_bottom
+      key.A1: finger_middle_bottom
       key.C: R3
       anchor:
         <<: *bav70anchor
         shift: [1,-24]
+    bav70_bottom3:
+      <<:  *bav70proto
+      key.A2: finger_index_bottom
+      key.A1: finger_inner_bottom
+      key.C: R3
+      anchor:
+        <<: *bav70anchor
+        shift: [7,-24]
     bav70_fan1:
       <<:  *bav70proto
       key.A1: roller
@@ -738,38 +738,39 @@ pcbs:
         params:
           A1: "{{A1}}"
           A2: "{{A2}}"
-          C: R1
+          C: "{{C}}"
       mcu:
         what: mcu_nice_nano
         where: finger_inner_num
         params:
           side: F
+          reverse_mount: true
           include_extra_pins: true
           RAW: 'RAW'
           GND: 'GND'
           RST: 'RST'
           VCC: '3V3'
-          P21: 'R0'
-          P20: 'R1'
-          P19: 'R2'
-          P18: 'R3'
-          P15: 'R4'
-          P14: 'C3'
-          P16: 'C4'
-          P10: 'C5'
-          P1: 'ROLLUP'
-          P0: 'ROLLDN'
-          P2: 'LED_DATA_3V3'
-          P3: 'LED_EN'
-          P4: 'LCD_DIN'
-          P5: 'LCD_CLK'
-          P6: 'LCD_DC'
-          P7: 'LCD_BL'
-          P8: 'C0'
-          P9: 'C1'
-          P101: 'LCD_CS'
-          P102: 'LCD_RST'
-          P107: 'C2'
+          P21: 'C0'
+          P20: 'C1'
+          P19: 'C2'
+          P18: 'R0'
+          P15: 'R1'
+          P14: 'R2'
+          P16: 'R3'
+          P10: 'R4'
+          P1: '5V_EN'
+          P0: 'LED_D3V'
+          P2: 'C4'
+          P3: 'C5'
+          P4: 'ROLLUP'
+          P5: 'ROLLDN'
+          P6: 'LCD_BL'
+          P7: 'LCD_DC'
+          P8: 'LCD_CLK'
+          P9: 'LCD_DIN'
+          P101: 'LCD_RST'
+          P102: 'LCD_CS'
+          P107: 'C3'
         adjust:
           shift: [29,-8.5]
           rotate: -8
@@ -791,13 +792,13 @@ pcbs:
           shift: [43,-8]
       reset_switch:
         what: reset_switch_smd_side
-        where: finger_inner_bottom
+        where: finger_inner_num
         params:
           from: GND
           to: RST
         adjust:
-          shift: [43,5]
-          rotate: -90      
+          shift: [13,8]
+          rotate: -8
       battery_connector:  
         what: battery_connector_jst_ph_2
         where: finger_inner_bottom
@@ -814,20 +815,24 @@ pcbs:
         where: /key/
         params:
           P1: "{{key.led_prev}}" #DIN
-          P2: LED_PWR
+          P2: 5V
           P3: "{{key.led_next}}" #DOUT
           P4: GND
         adjust:
           shift: [led_pos_x, led_pos_y]
           rotate: led_rotation
-    # Hoping we don't need this...
-      # load_switch:
-      #   what: led_load_switch
-      #   where: finger_inner_home
-      #   params:
-      #     P1: LED_SW
-      #     P2: 5V
-      #     P3: LED_PWR
-      #   adjust:
-      #     shift: [15,-2.5]
-      #     rotate: -90
+      LCD_header:
+        what: conn_molex_picoblade_smd_1x08_1mm25_horiz
+        where: finger_inner_home
+        params:
+          P1: 3V3
+          P2: GND
+          P3: LCD_DIN
+          P4: LCD_CLK
+          P5: LCD_CS
+          P6: LCD_DC
+          P7: LCD_RST
+          P8: LCD_BL
+        adjust:
+          shift: [30,5]
+          rotate: -8
