@@ -1,4 +1,4 @@
-26994735470351649
+26996484562248020
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -105979,6 +105979,13 @@ SMD Diode Array - 5 Diodes Common Cathode
 0
 6
 6
+huntercook
+LCD_1.69_Waveshare
+
+
+0
+0
+0
 huntercook
 L_CJIANG_FTC404030S_4.1x4.1x3.0_SMD
 Inductor, CJiang, FTC404030S, 4.1x4.1x3.0mm, (https://www.lcsc.com/datasheet/lcsc_datasheet_2409180941_cjiang--Changjiang-Microelectronics-Tech-FTC404030S2R2MGCA_C39676081.pdf), generated with kicad-footprint-generator gen_inductor.py

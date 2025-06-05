@@ -267,7 +267,7 @@
 
   (footprint "ceoloide:mounting_hole_npth"
     (layer "F.Cu")
-    (at 167.5933269 90.3570229 0)
+    (at 128.5933269 182.3570228 0)
     (property "Reference" "MH5"
       (at 0 2.55 0)
       (layer "F.SilkS")
@@ -285,44 +285,8 @@
 
   (footprint "ceoloide:mounting_hole_npth"
     (layer "F.Cu")
-    (at 194.5933269 109.3570229 0)
-    (property "Reference" "MH6"
-      (at 0 2.55 0)
-      (layer "F.SilkS")
-      hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" np_thru_hole circle
-      (at 0 0 0)
-      (size 2.2 2.2)
-      (drill 2.2)
-      (layers "*.Cu" "*.Mask")
-    )
-  )
-  
-
-  (footprint "ceoloide:mounting_hole_npth"
-    (layer "F.Cu")
-    (at 128.5933269 182.3570228 0)
-    (property "Reference" "MH7"
-      (at 0 2.55 0)
-      (layer "F.SilkS")
-      hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad "" np_thru_hole circle
-      (at 0 0 0)
-      (size 2.2 2.2)
-      (drill 2.2)
-      (layers "*.Cu" "*.Mask")
-    )
-  )
-  
-
-  (footprint "ceoloide:mounting_hole_npth"
-    (layer "F.Cu")
     (at 176.2000911 193.3320045 -30)
-    (property "Reference" "MH8"
+    (property "Reference" "MH6"
       (at 0 2.55 -30)
       (layer "F.SilkS")
       hide
@@ -340,7 +304,7 @@
   (footprint "ceoloide:mounting_hole_npth"
     (layer "F.Cu")
     (at 196.86034510000002 177.5473949 -30)
-    (property "Reference" "MH9"
+    (property "Reference" "MH7"
       (at 0 2.55 -30)
       (layer "F.SilkS")
       hide
@@ -370,7 +334,7 @@
 (pad "3" smd roundrect (at -6.35 6 4) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 -6 4) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 6 4) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
-(model \${MODELS}/PG1316S.STEP (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+(model \${HLC_MODELS}/PG1316S.STEP (offset (xyz -4.25 -7.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "PG1316S"
 (at 58.674627 141.046283 4)
@@ -388,7 +352,7 @@
 (pad "3" smd roundrect (at -6.35 6 4) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 -6 4) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 6 4) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
-(model \${MODELS}/PG1316S.STEP (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+(model \${HLC_MODELS}/PG1316S.STEP (offset (xyz -4.25 -7.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "PG1316S"
 (at 57.349254 122.09256599999999 4)
@@ -406,7 +370,7 @@
 (pad "3" smd roundrect (at -6.35 6 4) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 -6 4) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 6 4) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
-(model \${MODELS}/PG1316S.STEP (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+(model \${HLC_MODELS}/PG1316S.STEP (offset (xyz -4.25 -7.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "PG1316S"
 (at 56.023881 103.138849 4)
@@ -424,7 +388,7 @@
 (pad "3" smd roundrect (at -6.35 6 4) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 -6 4) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 6 4) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
-(model \${MODELS}/PG1316S.STEP (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+(model \${HLC_MODELS}/PG1316S.STEP (offset (xyz -4.25 -7.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "PG1316S"
 (at 78.8839605 157.6770629 3)
@@ -442,7 +406,7 @@
 (pad "3" smd roundrect (at -6.35 6 3) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 -6 3) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 6 3) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
-(model \${MODELS}/PG1316S.STEP (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+(model \${HLC_MODELS}/PG1316S.STEP (offset (xyz -4.25 -7.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "PG1316S"
 (at 77.8895773 138.70310170000002 3)
@@ -460,7 +424,7 @@
 (pad "3" smd roundrect (at -6.35 6 3) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 -6 3) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 6 3) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
-(model \${MODELS}/PG1316S.STEP (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+(model \${HLC_MODELS}/PG1316S.STEP (offset (xyz -4.25 -7.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "PG1316S"
 (at 76.8951941 119.72914050000001 3)
@@ -478,7 +442,7 @@
 (pad "3" smd roundrect (at -6.35 6 3) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 -6 3) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 6 3) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
-(model \${MODELS}/PG1316S.STEP (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+(model \${HLC_MODELS}/PG1316S.STEP (offset (xyz -4.25 -7.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "PG1316S"
 (at 75.9008109 100.75517930000001 3)
@@ -496,7 +460,7 @@
 (pad "3" smd roundrect (at -6.35 6 3) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 -6 3) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 6 3) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
-(model \${MODELS}/PG1316S.STEP (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+(model \${HLC_MODELS}/PG1316S.STEP (offset (xyz -4.25 -7.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "PG1316S"
 (at 97.6485778 152.6881616 1)
@@ -514,7 +478,7 @@
 (pad "3" smd roundrect (at -6.35 6 1) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 -6 1) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 6 1) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
-(model \${MODELS}/PG1316S.STEP (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+(model \${HLC_MODELS}/PG1316S.STEP (offset (xyz -4.25 -7.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "PG1316S"
 (at 97.3169821 133.6910554 1)
@@ -532,7 +496,7 @@
 (pad "3" smd roundrect (at -6.35 6 1) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 -6 1) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 6 1) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
-(model \${MODELS}/PG1316S.STEP (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+(model \${HLC_MODELS}/PG1316S.STEP (offset (xyz -4.25 -7.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "PG1316S"
 (at 96.98538640000001 114.6939492 1)
@@ -550,7 +514,7 @@
 (pad "3" smd roundrect (at -6.35 6 1) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 -6 1) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 6 1) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
-(model \${MODELS}/PG1316S.STEP (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+(model \${HLC_MODELS}/PG1316S.STEP (offset (xyz -4.25 -7.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "PG1316S"
 (at 96.65379070000002 95.696843 1)
@@ -568,7 +532,7 @@
 (pad "3" smd roundrect (at -6.35 6 1) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 -6 1) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 6 1) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
-(model \${MODELS}/PG1316S.STEP (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+(model \${HLC_MODELS}/PG1316S.STEP (offset (xyz -4.25 -7.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "PG1316S"
 (at 116.5933268 149.3570229 0)
@@ -586,7 +550,7 @@
 (pad "3" smd roundrect (at -6.35 6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 -6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
-(model \${MODELS}/PG1316S.STEP (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+(model \${HLC_MODELS}/PG1316S.STEP (offset (xyz -4.25 -7.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "PG1316S"
 (at 116.5933268 130.3570229 0)
@@ -604,7 +568,7 @@
 (pad "3" smd roundrect (at -6.35 6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 -6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
-(model \${MODELS}/PG1316S.STEP (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+(model \${HLC_MODELS}/PG1316S.STEP (offset (xyz -4.25 -7.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "PG1316S"
 (at 116.5933268 111.3570229 0)
@@ -622,7 +586,7 @@
 (pad "3" smd roundrect (at -6.35 6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 -6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
-(model \${MODELS}/PG1316S.STEP (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+(model \${HLC_MODELS}/PG1316S.STEP (offset (xyz -4.25 -7.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "PG1316S"
 (at 116.5933268 92.3570229 0)
@@ -640,7 +604,7 @@
 (pad "3" smd roundrect (at -6.35 6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 -6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
-(model \${MODELS}/PG1316S.STEP (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+(model \${HLC_MODELS}/PG1316S.STEP (offset (xyz -4.25 -7.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "PG1316S"
 (at 135.5933269 152.3570228 0)
@@ -658,7 +622,7 @@
 (pad "3" smd roundrect (at -6.35 6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 -6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
-(model \${MODELS}/PG1316S.STEP (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+(model \${HLC_MODELS}/PG1316S.STEP (offset (xyz -4.25 -7.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "PG1316S"
 (at 135.5933269 133.3570228 0)
@@ -676,7 +640,7 @@
 (pad "3" smd roundrect (at -6.35 6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 -6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
-(model \${MODELS}/PG1316S.STEP (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+(model \${HLC_MODELS}/PG1316S.STEP (offset (xyz -4.25 -7.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "PG1316S"
 (at 135.5933269 114.35702280000001 0)
@@ -694,7 +658,7 @@
 (pad "3" smd roundrect (at -6.35 6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 -6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
-(model \${MODELS}/PG1316S.STEP (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+(model \${HLC_MODELS}/PG1316S.STEP (offset (xyz -4.25 -7.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "PG1316S"
 (at 135.5933269 95.35702280000001 0)
@@ -712,7 +676,7 @@
 (pad "3" smd roundrect (at -6.35 6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 -6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
-(model \${MODELS}/PG1316S.STEP (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+(model \${HLC_MODELS}/PG1316S.STEP (offset (xyz -4.25 -7.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "PG1316S"
 (at 154.5933269 153.3570229 0)
@@ -730,7 +694,7 @@
 (pad "3" smd roundrect (at -6.35 6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 -6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
-(model \${MODELS}/PG1316S.STEP (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+(model \${HLC_MODELS}/PG1316S.STEP (offset (xyz -4.25 -7.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "PG1316S"
 (at 154.5933269 134.3570229 0)
@@ -748,7 +712,7 @@
 (pad "3" smd roundrect (at -6.35 6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 -6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
-(model \${MODELS}/PG1316S.STEP (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+(model \${HLC_MODELS}/PG1316S.STEP (offset (xyz -4.25 -7.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "PG1316S"
 (at 154.5933269 115.3570229 0)
@@ -766,7 +730,7 @@
 (pad "3" smd roundrect (at -6.35 6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 -6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
-(model \${MODELS}/PG1316S.STEP (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+(model \${HLC_MODELS}/PG1316S.STEP (offset (xyz -4.25 -7.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "PG1316S"
 (at 154.5933269 96.3570229 0)
@@ -784,7 +748,7 @@
 (pad "3" smd roundrect (at -6.35 6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 -6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
-(model \${MODELS}/PG1316S.STEP (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+(model \${HLC_MODELS}/PG1316S.STEP (offset (xyz -4.25 -7.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "PG1316S"
 (at 143.5933269 172.3570228 0)
@@ -802,7 +766,7 @@
 (pad "3" smd roundrect (at -6.35 6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 -6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 6 0) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
-(model \${MODELS}/PG1316S.STEP (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+(model \${HLC_MODELS}/PG1316S.STEP (offset (xyz -4.25 -7.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "PG1316S"
 (at 163.5933269 175.1070228 -15)
@@ -820,7 +784,7 @@
 (pad "3" smd roundrect (at -6.35 6 -15) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 -6 -15) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 6 -15) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
-(model \${MODELS}/PG1316S.STEP (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+(model \${HLC_MODELS}/PG1316S.STEP (offset (xyz -4.25 -7.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "PG1316S"
 (at 182.2000911 182.9396997 -30)
@@ -838,7 +802,7 @@
 (pad "3" smd roundrect (at -6.35 6 -30) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 -6 -30) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
 (pad "3" smd roundrect (at 6.35 6 -30) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.125) (thermal_bridge_angle 45) (net 3 "GND"))
-(model \${MODELS}/PG1316S.STEP (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+(model \${HLC_MODELS}/PG1316S.STEP (offset (xyz -4.25 -7.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "CKW12"
 (at 176.0488267 155.6683879 75)
@@ -885,11 +849,12 @@
 (fp_arc (start 9.458528 2.32934) (mid 9.502462 2.435406) (end 9.458528 2.541472) (stroke (width 0.05) (type default)) (layer "Edge.Cuts") )
 (fp_text user "${REFERENCE}" (at 0 2.5 75) (unlocked yes) (layer "F.Fab")  (effects (font (size 1 1) (thickness 0.15)) (justify)))
 (fp_rect (start -9 -9) (end 9 9) (stroke (width 0.1) (type solid)) (fill no) (layer "F.SilkS") )
+(model \${HLC_MODELS}/ckw12_roller_enc.step (offset (xyz 8 21 -7.75)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 90)))
 )
 
             (footprint "BAV70 SOT23" (generator pcbnew)
                 (layer "F.Cu")
-                (at 93.5933268 166.3570229 -90)
+                (at 93.5933268 173.3570229 -90)
                 (property "Reference" "D1"
                     (at 0 0 -90)
                     (layer "F.SilkS")
@@ -961,11 +926,13 @@
                         (roundrect_rratio 0.1)
                         (net 38 "R0")
                     )
+                (model \${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOT-23.step (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 90)))
+
         )
 
             (footprint "BAV70 SOT23" (generator pcbnew)
                 (layer "F.Cu")
-                (at 99.5933268 166.3570229 -90)
+                (at 99.5933268 173.3570229 -90)
                 (property "Reference" "D2"
                     (at 0 0 -90)
                     (layer "F.SilkS")
@@ -1037,11 +1004,13 @@
                         (roundrect_rratio 0.1)
                         (net 38 "R0")
                     )
+                (model \${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOT-23.step (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 90)))
+
         )
 
             (footprint "BAV70 SOT23" (generator pcbnew)
                 (layer "F.Cu")
-                (at 105.5933268 166.3570229 -90)
+                (at 105.5933268 173.3570229 -90)
                 (property "Reference" "D3"
                     (at 0 0 -90)
                     (layer "F.SilkS")
@@ -1113,11 +1082,13 @@
                         (roundrect_rratio 0.1)
                         (net 38 "R0")
                     )
+                (model \${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOT-23.step (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 90)))
+
         )
 
             (footprint "BAV70 SOT23" (generator pcbnew)
                 (layer "F.Cu")
-                (at 111.5933268 166.3570229 -90)
+                (at 111.5933268 173.3570229 -90)
                 (property "Reference" "D4"
                     (at 0 0 -90)
                     (layer "F.SilkS")
@@ -1189,11 +1160,13 @@
                         (roundrect_rratio 0.1)
                         (net 39 "R1")
                     )
+                (model \${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOT-23.step (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 90)))
+
         )
 
             (footprint "BAV70 SOT23" (generator pcbnew)
                 (layer "F.Cu")
-                (at 117.5933268 166.3570229 -90)
+                (at 117.5933268 173.3570229 -90)
                 (property "Reference" "D5"
                     (at 0 0 -90)
                     (layer "F.SilkS")
@@ -1265,11 +1238,13 @@
                         (roundrect_rratio 0.1)
                         (net 39 "R1")
                     )
+                (model \${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOT-23.step (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 90)))
+
         )
 
             (footprint "BAV70 SOT23" (generator pcbnew)
                 (layer "F.Cu")
-                (at 123.5933268 166.3570229 -90)
+                (at 123.5933268 173.3570229 -90)
                 (property "Reference" "D6"
                     (at 0 0 -90)
                     (layer "F.SilkS")
@@ -1341,11 +1316,13 @@
                         (roundrect_rratio 0.1)
                         (net 39 "R1")
                     )
+                (model \${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOT-23.step (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 90)))
+
         )
 
             (footprint "BAV70 SOT23" (generator pcbnew)
                 (layer "F.Cu")
-                (at 93.5933268 173.3570229 -90)
+                (at 93.5933268 166.3570229 -90)
                 (property "Reference" "D7"
                     (at 0 0 -90)
                     (layer "F.SilkS")
@@ -1417,11 +1394,13 @@
                         (roundrect_rratio 0.1)
                         (net 40 "R2")
                     )
+                (model \${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOT-23.step (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 90)))
+
         )
 
             (footprint "BAV70 SOT23" (generator pcbnew)
                 (layer "F.Cu")
-                (at 99.5933268 173.3570229 -90)
+                (at 99.5933268 166.3570229 -90)
                 (property "Reference" "D8"
                     (at 0 0 -90)
                     (layer "F.SilkS")
@@ -1493,11 +1472,13 @@
                         (roundrect_rratio 0.1)
                         (net 40 "R2")
                     )
+                (model \${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOT-23.step (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 90)))
+
         )
 
             (footprint "BAV70 SOT23" (generator pcbnew)
                 (layer "F.Cu")
-                (at 105.5933268 173.3570229 -90)
+                (at 105.5933268 166.3570229 -90)
                 (property "Reference" "D9"
                     (at 0 0 -90)
                     (layer "F.SilkS")
@@ -1569,11 +1550,13 @@
                         (roundrect_rratio 0.1)
                         (net 40 "R2")
                     )
+                (model \${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOT-23.step (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 90)))
+
         )
 
             (footprint "BAV70 SOT23" (generator pcbnew)
                 (layer "F.Cu")
-                (at 111.5933268 173.3570229 -90)
+                (at 111.5933268 166.3570229 -90)
                 (property "Reference" "D10"
                     (at 0 0 -90)
                     (layer "F.SilkS")
@@ -1645,11 +1628,13 @@
                         (roundrect_rratio 0.1)
                         (net 41 "R3")
                     )
+                (model \${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOT-23.step (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 90)))
+
         )
 
             (footprint "BAV70 SOT23" (generator pcbnew)
                 (layer "F.Cu")
-                (at 117.5933268 173.3570229 -90)
+                (at 117.5933268 166.3570229 -90)
                 (property "Reference" "D11"
                     (at 0 0 -90)
                     (layer "F.SilkS")
@@ -1721,11 +1706,13 @@
                         (roundrect_rratio 0.1)
                         (net 41 "R3")
                     )
+                (model \${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOT-23.step (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 90)))
+
         )
 
             (footprint "BAV70 SOT23" (generator pcbnew)
                 (layer "F.Cu")
-                (at 123.5933268 173.3570229 -90)
+                (at 123.5933268 166.3570229 -90)
                 (property "Reference" "D12"
                     (at 0 0 -90)
                     (layer "F.SilkS")
@@ -1797,6 +1784,8 @@
                         (roundrect_rratio 0.1)
                         (net 41 "R3")
                     )
+                (model \${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOT-23.step (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 90)))
+
         )
 
             (footprint "BAV70 SOT23" (generator pcbnew)
@@ -1873,6 +1862,8 @@
                         (roundrect_rratio 0.1)
                         (net 42 "R4")
                     )
+                (model \${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOT-23.step (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 90)))
+
         )
 
             (footprint "BAV70 SOT23" (generator pcbnew)
@@ -1949,13 +1940,15 @@
                         (roundrect_rratio 0.1)
                         (net 42 "R4")
                     )
+                (model \${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOT-23.step (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 90)))
+
         )
 
     
     
   (footprint "ceoloide:mcu_nice_nano"
     (layer "F.Cu")
-    (at 183.5933269 104.8570229 -8)
+    (at 182.0933269 104.5570229 -8)
     (property "Reference" "MCU1"
       (at 0 -15 -8)
       (layer "F.SilkS")
@@ -2135,11 +2128,32 @@
     
     
     
+    (model \${INFUSED_KIM_MODELS}/Nice_Nano_V2.step
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
+    
   )
 
   
   
     
+(footprint "LCD_1.69_Waveshare"
+(at 182.5933269 119.8570229 180)
+(layer "F.Cu")
+(property "Reference" "LCD1" hide (at 0 0 180) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
+(attr smd)
+(embedded_fonts no)
+(pad "" np_thru_hole circle (at -12.2 -15.9 180) (size 2.2 2.2) (drill 2.2) (layers "F&B.Cu" "*.Mask") )
+(pad "" np_thru_hole circle (at -12.2 15.9 180) (size 2.2 2.2) (drill 2.2) (layers "F&B.Cu" "*.Mask") )
+(pad "" np_thru_hole circle (at 12.2 -15.9 180) (size 2.2 2.2) (drill 2.2) (layers "F&B.Cu" "*.Mask") )
+(pad "" np_thru_hole circle (at 12.2 15.9 180) (size 2.2 2.2) (drill 2.2) (layers "F&B.Cu" "*.Mask") )
+(fp_text user "${REFERENCE}" (at 0 2.5 180) (unlocked yes) (layer "F.Fab")  (effects (font (size 1 1) (thickness 0.15)) (justify)))
+(fp_rect (start -15.75 -19.5) (end 15.75 19.5) (stroke (width 0.1) (type solid)) (fill no) (layer "F.SilkS") )
+(fp_rect (start -7.375 -7.03) (end 7.375 -2.83) (stroke (width 0.1) (type solid)) (fill no) (layer "F.SilkS") )
+(model \${HLC_MODELS}/waveshare_LCD_1in69.stp (offset (xyz 0 -1.5 8)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 180)))
+)
 
   (footprint "ceoloide:power_switch_smd_side"
     (layer "F.Cu")
@@ -2182,6 +2196,12 @@
     (fp_line (start 1.425 2.85) (end 1.425 -2.85) (layer "F.SilkS") (stroke (width 0.12) (type solid)))
     (fp_line (start -1.425 -1.4) (end -1.425 -1.6) (layer "F.SilkS") (stroke (width 0.12) (type solid)))
     
+    (model \${INFUSED_KIM_MODELS}/Switch_Power.step
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 -90))
+    )
+    
     (pad "" np_thru_hole circle (at 0.025 -1.5 90) (size 0.9 0.9) (drill 0.9) (layers "*.Cu" "*.Mask"))
     (pad "" np_thru_hole circle (at 0.025 1.5 90) (size 0.9 0.9) (drill 0.9) (layers "*.Cu" "*.Mask"))
   )
@@ -2189,7 +2209,7 @@
 
   (footprint "ceoloide:reset_switch_smd_side"
     (layer "F.Cu")
-    (at 167.5933269 88.3570229 -8)
+    (at 169.5933269 89.3570229 -8)
     (property "Reference" "RST1"
       (at 0 0 -8)
       (layer "F.SilkS")
@@ -2218,6 +2238,12 @@
     (fp_line (start 2.1 1.75) (end 2.35 1.75) (stroke (width 0.1) (type solid)) (layer "F.SilkS"))
     (fp_line (start 2.35 -1.5) (end 2.35 -1.75) (stroke (width 0.1) (type solid)) (layer "F.SilkS"))
     (fp_line (start 2.35 1.5) (end 2.35 1.75) (stroke (width 0.1) (type solid)) (layer "F.SilkS"))
+    
+    (model \${INFUSED_KIM_MODELS}/Switch_Reset.step
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 180))
+    )
     
   )
     
@@ -2261,6 +2287,12 @@
         (pad "1" thru_hole roundrect (at 1 0 180) (size 1.2 1.75) (drill 0.75) (layers "*.Cu" "*.Mask") (roundrect_rratio 0.20) (net 3 "GND"))
         (pad "2" thru_hole oval (at -1 0 180) (size 1.2 1.75) (drill 0.75) (layers "*.Cu" "*.Mask") (net 78 "BAT_P"))
         
+    (model \${KICAD9_3DMODEL_DIR}/Connector_JST.3dshapes/JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal.step
+      (offset (xyz 1 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 180))
+    )
+    
     )
         
 (footprint "LED_WS2812B-2020_PLCC4_2.0x2.0mm"
@@ -3101,23 +3133,23 @@
 (model "${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_WS2812B-2020_PLCC4_2.0x2.0mm.wrl" (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "Molex_PicoBlade_53261-0871_1x08-1MP_P1.25mm_Horizontal"
-(at 184.5933269 129.3570229 -8)
+(at 182.5933269 134.3570229 0)
 (layer "F.Cu")
-(property "Reference" "CONN1" hide (at 0 0 -8) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
+(property "Reference" "CONN1" hide (at 0 0 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
 (descr "Molex PicoBlade series connector, 53261-0871 (http://www.molex.com/pdm_docs/sd/532610271_sd.pdf), generated with kicad-footprint-generator")
 (tags "connector Molex PicoBlade horizontal")
 (attr smd)
 (embedded_fonts no)
-(pad "1" smd roundrect (at -4.375 -2.4 -8) (size 0.8 1.6) (layers "F.Cu" "F.Mask" "F.Paste") (roundrect_rratio 0.25) (net 45 "3V3"))
-(pad "2" smd roundrect (at -3.125 -2.4 -8) (size 0.8 1.6) (layers "F.Cu" "F.Mask" "F.Paste") (roundrect_rratio 0.25) (net 3 "GND"))
-(pad "3" smd roundrect (at -1.875 -2.4 -8) (size 0.8 1.6) (layers "F.Cu" "F.Mask" "F.Paste") (roundrect_rratio 0.25) (net 51 "LCD_DIN"))
-(pad "4" smd roundrect (at -0.625 -2.4 -8) (size 0.8 1.6) (layers "F.Cu" "F.Mask" "F.Paste") (roundrect_rratio 0.25) (net 50 "LCD_CLK"))
-(pad "5" smd roundrect (at 0.625 -2.4 -8) (size 0.8 1.6) (layers "F.Cu" "F.Mask" "F.Paste") (roundrect_rratio 0.25) (net 53 "LCD_CS"))
-(pad "6" smd roundrect (at 1.875 -2.4 -8) (size 0.8 1.6) (layers "F.Cu" "F.Mask" "F.Paste") (roundrect_rratio 0.25) (net 49 "LCD_DC"))
-(pad "7" smd roundrect (at 3.125 -2.4 -8) (size 0.8 1.6) (layers "F.Cu" "F.Mask" "F.Paste") (roundrect_rratio 0.25) (net 52 "LCD_RST"))
-(pad "8" smd roundrect (at 4.375 -2.4 -8) (size 0.8 1.6) (layers "F.Cu" "F.Mask" "F.Paste") (roundrect_rratio 0.25) (net 48 "LCD_BL"))
-(pad "MP" smd roundrect (at -6.925 0.5 -8) (size 2.1 3) (layers "F.Cu" "F.Mask" "F.Paste") (roundrect_rratio 0.119048) (net 0 ""))
-(pad "MP" smd roundrect (at 6.925 0.5 -8) (size 2.1 3) (layers "F.Cu" "F.Mask" "F.Paste") (roundrect_rratio 0.119048) (net 0 ""))
+(pad "1" smd roundrect (at -4.375 -2.4 0) (size 0.8 1.6) (layers "F.Cu" "F.Mask" "F.Paste") (roundrect_rratio 0.25) (net 45 "3V3"))
+(pad "2" smd roundrect (at -3.125 -2.4 0) (size 0.8 1.6) (layers "F.Cu" "F.Mask" "F.Paste") (roundrect_rratio 0.25) (net 3 "GND"))
+(pad "3" smd roundrect (at -1.875 -2.4 0) (size 0.8 1.6) (layers "F.Cu" "F.Mask" "F.Paste") (roundrect_rratio 0.25) (net 51 "LCD_DIN"))
+(pad "4" smd roundrect (at -0.625 -2.4 0) (size 0.8 1.6) (layers "F.Cu" "F.Mask" "F.Paste") (roundrect_rratio 0.25) (net 50 "LCD_CLK"))
+(pad "5" smd roundrect (at 0.625 -2.4 0) (size 0.8 1.6) (layers "F.Cu" "F.Mask" "F.Paste") (roundrect_rratio 0.25) (net 53 "LCD_CS"))
+(pad "6" smd roundrect (at 1.875 -2.4 0) (size 0.8 1.6) (layers "F.Cu" "F.Mask" "F.Paste") (roundrect_rratio 0.25) (net 49 "LCD_DC"))
+(pad "7" smd roundrect (at 3.125 -2.4 0) (size 0.8 1.6) (layers "F.Cu" "F.Mask" "F.Paste") (roundrect_rratio 0.25) (net 52 "LCD_RST"))
+(pad "8" smd roundrect (at 4.375 -2.4 0) (size 0.8 1.6) (layers "F.Cu" "F.Mask" "F.Paste") (roundrect_rratio 0.25) (net 48 "LCD_BL"))
+(pad "MP" smd roundrect (at -6.925 0.5 0) (size 2.1 3) (layers "F.Cu" "F.Mask" "F.Paste") (roundrect_rratio 0.119048) (net 0 ""))
+(pad "MP" smd roundrect (at 6.925 0.5 0) (size 2.1 3) (layers "F.Cu" "F.Mask" "F.Paste") (roundrect_rratio 0.119048) (net 0 ""))
 (fp_line (start -8.48 -3.7) (end -8.48 3.1) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
 (fp_line (start -8.48 3.1) (end 8.48 3.1) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
 (fp_line (start 8.48 -3.7) (end -8.48 -3.7) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
@@ -3140,7 +3172,7 @@
 (fp_line (start 7.375 2.2) (end 5.875 2.2) (stroke (width 0.1) (type solid)) (layer "F.Fab"))
 (fp_line (start 7.575 -0.4) (end 7.575 1.4) (stroke (width 0.1) (type solid)) (layer "F.Fab"))
 (fp_line (start 7.575 1.4) (end 7.375 1.6) (stroke (width 0.1) (type solid)) (layer "F.Fab"))
-(fp_text user "${REFERENCE}" (at 0 1.9 -8) (layer "F.Fab") (effects (font (size 1 1) (thickness 0.15)) (justify)))
+(fp_text user "${REFERENCE}" (at 0 1.9 0) (layer "F.Fab") (effects (font (size 1 1) (thickness 0.15)) (justify)))
 (fp_line (start -5.985 -1.71) (end -5.035 -1.71) (stroke (width 0.12) (type solid)) (layer "F.SilkS"))
 (fp_line (start -5.985 -1.26) (end -5.985 -1.71) (stroke (width 0.12) (type solid)) (layer "F.SilkS"))
 (fp_line (start -5.985 2.26) (end -5.985 2.71) (stroke (width 0.12) (type solid)) (layer "F.SilkS"))

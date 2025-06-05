@@ -339,7 +339,7 @@ points:
         C: R0
       anchor: &bav70anchor
         - ref: finger_middle_bottom
-          shift: [-23,-17]
+          shift: [-23,-24]
           rotate: -90
     bav70_num2:
       <<:  *bav70proto
@@ -348,7 +348,7 @@ points:
       key.C: R0
       anchor:
         <<: *bav70anchor
-        shift: [-17,-17]
+        shift: [-17,-24]
     bav70_num3:
       <<:  *bav70proto
       key.A2: finger_index_num
@@ -356,7 +356,7 @@ points:
       key.C: R0
       anchor:
         <<: *bav70anchor
-        shift: [-11,-17]
+        shift: [-11,-24]
     bav70_top1:
       <<:  *bav70proto
       key.A2: finger_outer_top
@@ -364,7 +364,7 @@ points:
       key.C: R1
       anchor:
         <<: *bav70anchor
-        shift: [-5,-17]
+        shift: [-5,-24]
     bav70_top2:
       <<:  *bav70proto
       key.A2: finger_ring_top
@@ -372,7 +372,7 @@ points:
       key.C: R1
       anchor:
         <<: *bav70anchor
-        shift: [1,-17]
+        shift: [1,-24]
     bav70_top3:
       <<:  *bav70proto
       key.A2: finger_index_top
@@ -380,7 +380,7 @@ points:
       key.C: R1
       anchor:
         <<: *bav70anchor
-        shift: [7,-17]
+        shift: [7,-24]
     bav70_home1:
       <<:  *bav70proto
       key.A2: finger_outer_home
@@ -388,7 +388,7 @@ points:
       key.C: R2
       anchor:
         <<: *bav70anchor
-        shift: [-23,-24]
+        shift: [-23,-17]
     bav70_home2:
       <<:  *bav70proto
       key.A2: finger_ring_home
@@ -396,7 +396,7 @@ points:
       key.C: R2
       anchor:
         <<: *bav70anchor
-        shift: [-17,-24]
+        shift: [-17,-17]
     bav70_home3:
       <<:  *bav70proto
       key.A2: finger_index_home
@@ -404,7 +404,7 @@ points:
       key.C: R2
       anchor:
         <<: *bav70anchor
-        shift: [-11,-24]
+        shift: [-11,-17]
     bav70_bottom1:
       <<:  *bav70proto
       key.A2: finger_outer_bottom
@@ -412,7 +412,7 @@ points:
       key.C: R3
       anchor:
         <<: *bav70anchor
-        shift: [-5,-24]
+        shift: [-5,-17]
     bav70_bottom2:
       <<:  *bav70proto
       key.A2: finger_ring_bottom
@@ -420,7 +420,7 @@ points:
       key.C: R3
       anchor:
         <<: *bav70anchor
-        shift: [1,-24]
+        shift: [1,-17]
     bav70_bottom3:
       <<:  *bav70proto
       key.A2: finger_index_bottom
@@ -428,7 +428,7 @@ points:
       key.C: R3
       anchor:
         <<: *bav70anchor
-        shift: [7,-24]
+        shift: [7,-17]
     bav70_fan1:
       <<:  *bav70proto
       key.A1: roller
@@ -445,7 +445,6 @@ points:
       anchor:
         <<: *bav70anchor
         shift: [13,-24]
-
 
     screw_pcb_left_top:
       key.tags:
@@ -475,20 +474,21 @@ points:
       anchor:
         - ref: finger_middle_num
           shift: [13, 9]
-    screw_pcb_rightish_top:
-      key.tags:
-        - helper
-        - screw
-      anchor:
-        - ref: finger_inner_num
-          shift: [13, 6]
-    screw_pcb_right_top:
-      key.tags:
-        - helper
-        - screw
-      anchor:
-        - ref: finger_inner_top
-          shift: [40, 6]
+    # These were obviated by the LCD mounting screws.
+    # screw_pcb_rightish_top:
+    #   key.tags:
+    #     - helper
+    #     - screw
+    #   anchor:
+    #     - ref: finger_inner_num
+    #       shift: [14, 3]
+    # screw_pcb_right_top:
+    #   key.tags:
+    #     - helper
+    #     - screw
+    #   anchor:
+    #     - ref: finger_inner_top
+    #       shift: [42, 14]
     screw_pcb_thumb_left:
       key.tags:
         - helper
@@ -720,7 +720,8 @@ pcbs:
           mp_vias: false
           mp_via_size: 0.4
           mp_gnd: true
-          key_3dmodel_filename: '\${MODELS}/PG1316S.STEP'
+          key_3dmodel_filename: '\${HLC_MODELS}/PG1316S.STEP'
+          key_3dmodel_xyz_offset: [-4.25, -7.25, -10.25]
         adjust:
           rotate: switch_rotation
       roller:
@@ -732,6 +733,10 @@ pcbs:
           A: ROLLUP
           B: GND
           C: ROLLDN
+          roller_3dmodel_filename: '\${HLC_MODELS}/ckw12_roller_enc.step'
+          roller_3dmodel_xyz_offset: [8, 21, -7.75]
+          roller_3dmodel_xyz_rotation: [0, 0, 90]
+          roller_3dmodel_xyz_scale: [1, 1, 1]
       bav70:
         what: diode_bav70_larssont
         where: /diode/
@@ -739,13 +744,20 @@ pcbs:
           A1: "{{A1}}"
           A2: "{{A2}}"
           C: "{{C}}"
+          diode_3dmodel_filename: '\${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOT-23.step'
+          diode_3dmodel_xyz_rotation: [0, 0, 90]
+          diode_3dmodel_xyz_offset: [0, 0, 0]
       mcu:
         what: mcu_nice_nano
         where: finger_inner_num
         params:
           side: F
           reverse_mount: true
-          include_extra_pins: true
+          include_extra_pins: true   
+          mcu_3dmodel_filename: '\${INFUSED_KIM_MODELS}/Nice_Nano_V2.step'
+          mcu_3dmodel_xyz_offset: [0, 0, 0]
+          mcu_3dmodel_xyz_rotation: [0, 0, 0]
+          mcu_3dmodel_xyz_scale: [1, 1, 1]
           RAW: 'RAW'
           GND: 'GND'
           RST: 'RST'
@@ -772,22 +784,27 @@ pcbs:
           P102: 'LCD_CS'
           P107: 'C3'
         adjust:
-          shift: [29,-8.5]
+          shift: [27.5,-8.2]
           rotate: -8
-      # apple_watch:
-      #   what: display_nice_view
-      #   where: finger_inner_num
-      #   params:
-      #     MOSI: SDA
-      #     SCK: SCL
-      #   adjust:
-      #     shift: [20,-12]
+      apple_watch:
+        what: lcd_waveshare_1in69
+        where: finger_inner_num
+        params:
+          lcd_3dmodel_filename: '\${HLC_MODELS}/waveshare_LCD_1in69.stp'
+          lcd_3dmodel_xyz_offset: [0, -1.5, 8]
+          lcd_3dmodel_xyz_rotation: [0, 0, 180]
+          lcd_3dmodel_xyz_scale: [1, 1, 1]
+        adjust:
+          shift: [28,-23.5]
+          rotate: 180
       on_off_switch:
         what: power_switch_smd_side
         where: finger_inner_bottom
         params:
           from: RAW
           to: BAT_P
+          switch_3dmodel_filename: '\${INFUSED_KIM_MODELS}/Switch_Power.step'
+          switch_3dmodel_xyz_rotation: [-90, 0, -90]
         adjust:
           shift: [43,-8]
       reset_switch:
@@ -796,8 +813,10 @@ pcbs:
         params:
           from: GND
           to: RST
+          reset_switch_3dmodel_filename: '\${INFUSED_KIM_MODELS}/Switch_Reset.step'
+          reset_switch_3dmodel_xyz_rotation: [-90, 0, 180]
         adjust:
-          shift: [13,8]
+          shift: [15,7]
           rotate: -8
       battery_connector:  
         what: battery_connector_jst_ph_2
@@ -806,7 +825,11 @@ pcbs:
           side: B
           BAT_P: BAT_P
           BAT_N: GND
-          include_courtyard: true
+          include_courtyard: true    
+          battery_connector_3dmodel_filename: '\${KICAD9_3DMODEL_DIR}/Connector_JST.3dshapes/JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal.step'
+          battery_connector_3dmodel_xyz_offset: [1, 0, 0]
+          battery_connector_3dmodel_xyz_rotation: [0, 0, 180]
+          battery_connector_3dmodel_xyz_scale: [1, 1, 1]
         adjust:
           shift: [40,-18]
           rotate: 180
@@ -834,5 +857,5 @@ pcbs:
           P7: LCD_RST
           P8: LCD_BL
         adjust:
-          shift: [30,5]
-          rotate: -8
+          shift: [28,0]
+          rotate: 0
