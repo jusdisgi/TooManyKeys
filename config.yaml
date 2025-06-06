@@ -439,8 +439,8 @@ points:
         shift: [13,-17]
     bav70_fan2:
       <<:  *bav70proto
-      key.A1: thumb_mid_fan
-      key.A2: thumb_far_fan
+      key.A1: thumb_far_fan
+      key.A2: thumb_mid_fan
       key.C: R4
       anchor:
         <<: *bav70anchor
@@ -693,7 +693,6 @@ pcbs:
     outlines: 
       main:
         outline: board_left
-        #outline: bessie
     footprints:
       m2_screwholes:
         what: mounting_hole_npth 
@@ -715,10 +714,12 @@ pcbs:
           square_p2: true
           shift_p2: false
           small_mp: false
-          pad_vias: false
+          pad_vias: true
           pad_via_size: 0.4
-          mp_vias: false
+          pad_via_hole: 0.3
+          mp_vias: true
           mp_via_size: 0.4
+          mp_via_hole: 0.3
           mp_gnd: true
           key_3dmodel_filename: '\${HLC_MODELS}/PG1316S.STEP'
           key_3dmodel_xyz_offset: [-4.25, -7.25, -10.25]
@@ -841,10 +842,10 @@ pcbs:
           P2: 5V
           P3: "{{key.led_next}}" #DOUT
           P4: GND
-          p1_via: true
+          p1_via: false
           p2_via: true
-          p3_via: true
-          p4_via: false
+          p3_via: false
+          p4_via: true
         adjust:
           shift: [led_pos_x, led_pos_y]
           rotate: led_rotation
