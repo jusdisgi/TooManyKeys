@@ -334,8 +334,8 @@ points:
         tags:
           helper
           diode
-        A2: finger_outer_num
         A1: finger_pinky_num
+        A2: finger_outer_num
         C: R0
       anchor: &bav70anchor
         - ref: finger_middle_bottom
@@ -343,88 +343,88 @@ points:
           rotate: -90
     bav70_num2:
       <<:  *bav70proto
-      key.A2: finger_ring_num
-      key.A1: finger_middle_num
+      key.A1: finger_ring_num
+      key.A2: finger_middle_num
       key.C: R0
       anchor:
         <<: *bav70anchor
         shift: [-17,-24]
     bav70_num3:
       <<:  *bav70proto
-      key.A2: finger_index_num
-      key.A1: finger_inner_num
+      key.A1: finger_index_num
+      key.A2: finger_inner_num
       key.C: R0
       anchor:
         <<: *bav70anchor
         shift: [-11,-24]
     bav70_top1:
       <<:  *bav70proto
-      key.A2: finger_outer_top
       key.A1: finger_pinky_top
+      key.A2: finger_outer_top
       key.C: R1
       anchor:
         <<: *bav70anchor
         shift: [-5,-24]
     bav70_top2:
       <<:  *bav70proto
-      key.A2: finger_ring_top
-      key.A1: finger_middle_top
+      key.A1: finger_ring_top
+      key.A2: finger_middle_top
       key.C: R1
       anchor:
         <<: *bav70anchor
         shift: [1,-24]
     bav70_top3:
       <<:  *bav70proto
-      key.A2: finger_index_top
-      key.A1: finger_inner_top
+      key.A1: finger_index_top
+      key.A2: finger_inner_top
       key.C: R1
       anchor:
         <<: *bav70anchor
         shift: [7,-24]
     bav70_home1:
       <<:  *bav70proto
-      key.A2: finger_outer_home
       key.A1: finger_pinky_home
+      key.A2: finger_outer_home
       key.C: R2
       anchor:
         <<: *bav70anchor
         shift: [-23,-17]
     bav70_home2:
       <<:  *bav70proto
-      key.A2: finger_ring_home
-      key.A1: finger_middle_home
+      key.A1: finger_ring_home
+      key.A2: finger_middle_home
       key.C: R2
       anchor:
         <<: *bav70anchor
         shift: [-17,-17]
     bav70_home3:
       <<:  *bav70proto
-      key.A2: finger_index_home
-      key.A1: finger_inner_home
+      key.A1: finger_index_home
+      key.A2: finger_inner_home
       key.C: R2
       anchor:
         <<: *bav70anchor
         shift: [-11,-17]
     bav70_bottom1:
       <<:  *bav70proto
-      key.A2: finger_outer_bottom
       key.A1: finger_pinky_bottom
+      key.A2: finger_outer_bottom
       key.C: R3
       anchor:
         <<: *bav70anchor
         shift: [-5,-17]
     bav70_bottom2:
       <<:  *bav70proto
-      key.A2: finger_ring_bottom
       key.A1: finger_middle_bottom
+      key.A2: finger_ring_bottom
       key.C: R3
       anchor:
         <<: *bav70anchor
         shift: [1,-17]
     bav70_bottom3:
       <<:  *bav70proto
-      key.A2: finger_index_bottom
       key.A1: finger_inner_bottom
+      key.A2: finger_index_bottom
       key.C: R3
       anchor:
         <<: *bav70anchor
@@ -715,10 +715,10 @@ pcbs:
           shift_p2: false
           small_mp: false
           pad_vias: true
-          pad_via_size: 0.4
+          pad_via_size: 0.5
           pad_via_hole: 0.3
           mp_vias: true
-          mp_via_size: 0.4
+          mp_via_size: 0.5
           mp_via_hole: 0.3
           mp_gnd: true
           key_3dmodel_filename: '\${HLC_MODELS}/PG1316S.STEP'
@@ -807,7 +807,7 @@ pcbs:
           switch_3dmodel_filename: '\${INFUSED_KIM_MODELS}/Switch_Power.step'
           switch_3dmodel_xyz_rotation: [-90, 0, -90]
         adjust:
-          shift: [43,-8]
+          shift: [42.745,-8] #This X value lines up with the battery, change them together.
       reset_switch:
         what: reset_switch_smd_side
         where: finger_inner_num
@@ -832,7 +832,7 @@ pcbs:
           battery_connector_3dmodel_xyz_rotation: [0, 0, 180]
           battery_connector_3dmodel_xyz_scale: [1, 1, 1]
         adjust:
-          shift: [40.265,-18] #This X value lines up the + pad with the switch contact.
+          shift: [40,-18] #This X value lines up the + pad with the switch contact.
           rotate: 180
       per_key_leds:
         what: led_ws2812b_2020
@@ -844,8 +844,12 @@ pcbs:
           P4: GND
           p1_via: false
           p2_via: true
+          p2_via_size: 0.5
+          p2_via_hole: 0.3
           p3_via: false
           p4_via: true
+          p4_via_size: 0.5
+          p4_via_hole: 0.3
         adjust:
           shift: [led_pos_x, led_pos_y]
           rotate: led_rotation
