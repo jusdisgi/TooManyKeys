@@ -334,8 +334,8 @@ points:
         tags:
           helper
           diode
-        A1: finger_pinky_num
-        A2: finger_outer_num
+        A1: finger_outer_num
+        A2: finger_pinky_num
         C: R0
       anchor: &bav70anchor
         - ref: finger_middle_bottom
@@ -359,8 +359,8 @@ points:
         shift: [-11,-24]
     bav70_top1:
       <<:  *bav70proto
-      key.A1: finger_pinky_top
-      key.A2: finger_outer_top
+      key.A1: finger_outer_top
+      key.A2: finger_pinky_top
       key.C: R1
       anchor:
         <<: *bav70anchor
@@ -383,8 +383,8 @@ points:
         shift: [7,-24]
     bav70_home1:
       <<:  *bav70proto
-      key.A1: finger_pinky_home
-      key.A2: finger_outer_home
+      key.A1: finger_outer_home
+      key.A2: finger_pinky_home
       key.C: R2
       anchor:
         <<: *bav70anchor
@@ -423,8 +423,8 @@ points:
         shift: [1,-17]
     bav70_bottom3:
       <<:  *bav70proto
-      key.A1: finger_inner_bottom
-      key.A2: finger_index_bottom
+      key.A1: finger_index_bottom
+      key.A2: finger_inner_bottom
       key.C: R3
       anchor:
         <<: *bav70anchor
@@ -439,8 +439,8 @@ points:
         shift: [13,-17]
     bav70_fan2:
       <<:  *bav70proto
-      key.A1: thumb_far_fan
-      key.A2: thumb_mid_fan
+      key.A1: thumb_mid_fan
+      key.A2: thumb_far_fan
       key.C: R4
       anchor:
         <<: *bav70anchor
@@ -775,12 +775,12 @@ pcbs:
           P0: 'LED_D3V'
           P2: 'C4'
           P3: 'C5'
-          P4: 'ROLLUP'
-          P5: 'ROLLDN'
-          P6: 'LCD_BL'
-          P7: 'LCD_DC'
-          P8: 'LCD_CLK'
-          P9: 'LCD_DIN'
+          P4: 'LCD_BL'
+          P5: 'LCD_DC'
+          P6: 'LCD_CLK'
+          P7: 'LCD_DIN'
+          P8: 'ROLLUP'
+          P9: 'ROLLDN'
           P101: 'LCD_RST'
           P102: 'LCD_CS'
           P107: 'C3'

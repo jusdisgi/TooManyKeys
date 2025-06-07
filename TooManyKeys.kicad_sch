@@ -5524,7 +5524,1137 @@
 		)
 		(uuid "ff22c220-1555-4bc2-be51-e78fd5437bad")
 	)
-	(global_label "5V"
+	(label "LED_22"
+		(at 190.5 50.8 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "073d6fbc-43cc-4a2d-acd1-94489288b196")
+	)
+	(label "LED_D5V"
+		(at 261.62 101.6 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "15608b7d-3e4f-40a6-b02a-f33e82c688b9")
+	)
+	(label "LED_11"
+		(at 251.46 66.04 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "15f12df2-a79b-401d-90aa-c9da59a813fe")
+	)
+	(label "finger_index_top"
+		(at 109.22 53.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "15f2c777-700f-4a24-a917-88fe235077a4")
+	)
+	(label "finger_ring_num"
+		(at 67.31 35.56 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "18206ce2-9633-4c8c-8158-e25606a6e7ae")
+	)
+	(label "finger_pinky_num"
+		(at 41.91 35.56 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "1c739a16-f4bd-40dc-96e2-807afd0ee30e")
+	)
+	(label "roller"
+		(at 109.22 106.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1c98c415-da45-463d-b642-61f7cde36b5b")
+	)
+	(label "LED_15"
+		(at 231.14 35.56 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1d502a7f-6ea6-42bc-82c0-a4c8cfaba720")
+	)
+	(label "LED_21"
+		(at 190.5 35.56 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1dde3539-b427-4e02-b211-23a091be6076")
+	)
+	(label "finger_inner_top"
+		(at 124.46 53.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "20079732-aa44-466e-be28-a10dbccee385")
+	)
+	(label "LED_15"
+		(at 210.82 35.56 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "20c0ca29-fe94-4bbf-9d35-e50b9fdb0fbc")
+	)
+	(label "C3"
+		(at 82.55 53.34 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "20fd6f59-e4df-4e57-8e59-0e0cf44da15c")
+	)
+	(label "finger_ring_bottom"
+		(at 82.55 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "227285ec-ec88-46ea-94a0-2f34f1063334")
+	)
+	(label "C1"
+		(at 41.91 53.34 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "27b3859d-4bee-4df8-add2-07ee233c79eb")
+	)
+	(label "RST"
+		(at 41.91 156.21 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "292e72ec-865a-4933-9e71-47c231068bf0")
+	)
+	(label "finger_outer_bottom"
+		(at 41.91 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "29b2a90d-5c36-4af3-bb83-a49d94a7b6c6")
+	)
+	(label "finger_index_home"
+		(at 109.22 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2b3b47e7-d281-4eb4-99df-c07b5f869820")
+	)
+	(label "LED_6"
+		(at 271.78 50.8 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2fda6572-cfef-4fd2-8262-98f008ac24ff")
+	)
+	(label "LED_1"
+		(at 246.38 101.6 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "35c01a14-a9d0-45d2-ab77-b91f89bc4d74")
+	)
+	(label "finger_ring_top"
+		(at 67.31 53.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "35c466ad-edbb-450f-827e-260be8ed0572")
+	)
+	(label "LED_10"
+		(at 251.46 81.28 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "385c6bfd-7ca1-469f-b677-ad8a079aa557")
+	)
+	(label "RST"
+		(at 41.91 156.21 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "389988b2-4d46-4306-92d9-d7c317c16207")
+	)
+	(label "finger_index_home"
+		(at 109.22 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3a11f8d1-7311-468f-bd6c-3c4fafc3a77d")
+	)
+	(label "LED_22"
+		(at 170.18 20.32 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3bb41b31-5c84-4068-b248-54eaa89d1a59")
+	)
+	(label "finger_pinky_home"
+		(at 41.91 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3e039cb2-0485-438b-af71-7c154f12454e")
+	)
+	(label "finger_ring_home"
+		(at 67.31 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3edaa30d-0a5e-4996-9d1a-af24aeee204c")
+	)
+	(label "LED_3"
+		(at 271.78 66.04 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "40f84c87-46c1-40e4-8819-7e657deb9610")
+	)
+	(label "C1"
+		(at 41.91 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "41c39091-b5d2-402b-87b2-ffc6c7dd52f1")
+	)
+	(label "finger_ring_bottom"
+		(at 67.31 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4255b111-f9b6-4893-af0c-007dd2fedf9b")
+	)
+	(label "finger_outer_bottom"
+		(at 26.67 88.9 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "431b9d54-dc54-435a-87b0-e6ded7297d92")
+	)
+	(label "LED_19"
+		(at 190.5 66.04 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "46597fc7-a33d-4830-8597-565493349494")
+	)
+	(label "finger_middle_bottom"
+		(at 67.31 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4b9ad9f4-1807-4f75-9289-b71106a6459c")
+	)
+	(label "LED_19"
+		(at 210.82 66.04 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4bbcaa20-4e4e-4784-bef2-c2a69e6ca09d")
+	)
+	(label "LED_13"
+		(at 231.14 35.56 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4bdd9b7a-ec46-43b5-9074-5cc041d3fd31")
+	)
+	(label "thumb_near_fan"
+		(at 129.54 106.68 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4e2ff4fa-2e68-441a-ae9f-524d51d52f0e")
+	)
+	(label "finger_index_num"
+		(at 109.22 35.56 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "50b43408-cf7f-4108-8049-f03223362972")
+	)
+	(label "LED_5"
+		(at 271.78 66.04 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "50e6f0eb-b758-470d-98e1-b92e68ae3599")
+	)
+	(label "LED_25"
+		(at 170.18 35.56 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "56d1e68c-c66f-46f3-88f3-602a757f877b")
+	)
+	(label "LED_23"
+		(at 170.18 35.56 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "5ba3236a-5627-453c-8d0b-a0dd02470793")
+	)
+	(label "finger_inner_num"
+		(at 124.46 35.56 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5d9794f7-08b0-4b96-8e97-3a1b9fe98164")
+	)
+	(label "finger_middle_num"
+		(at 82.55 35.56 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "5d9d24c4-5b36-4739-9608-187aa74508e6")
+	)
+	(label "C3"
+		(at 82.55 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5e4e7dd7-d20b-4f31-a944-779c7b66d95d")
+	)
+	(label "LED_21"
+		(at 190.5 66.04 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "60de9e8f-a585-42eb-8cfa-074251e74680")
+	)
+	(label "finger_outer_top"
+		(at 26.67 53.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "61c580c0-377a-498f-986f-c0354fc729e5")
+	)
+	(label "LED_6"
+		(at 251.46 20.32 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "64604976-1a23-407f-af45-773896da0b76")
+	)
+	(label "LED_24"
+		(at 170.18 50.8 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "66017de5-0c1c-4696-91f6-01c6c6b6012c")
+	)
+	(label "finger_ring_num"
+		(at 67.31 35.56 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "6e7b766f-0c18-45ad-85c3-812d5030eea4")
+	)
+	(label "LED_3"
+		(at 246.38 101.6 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "6f59a9c0-ad79-49cb-9c45-0265daf6ccf9")
+	)
+	(label "C5"
+		(at 124.46 53.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "71df5ca1-dc0a-4226-baf0-68d794c655b1")
+	)
+	(label "LED_14"
+		(at 210.82 20.32 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "724de310-21b7-4bcb-891e-19b9d0f6e4c6")
+	)
+	(label "finger_outer_top"
+		(at 26.67 53.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7446574c-10ce-4f8e-ab14-d160c5af2d76")
+	)
+	(label "RAW"
+		(at 41.91 139.7 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "764be4f1-6374-4e4b-9114-e18b94c994ea")
+	)
+	(label "LED_20"
+		(at 190.5 50.8 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "76fd3567-c58c-40b1-9336-d74e84931fd3")
+	)
+	(label "LED_26"
+		(at 170.18 81.28 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "78da0645-8a4b-465f-ab55-14129deb5497")
+	)
+	(label "finger_pinky_bottom"
+		(at 26.67 88.9 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "7bba7b20-6c5c-446c-9bfd-0f28bd115f2b")
+	)
+	(label "finger_outer_num"
+		(at 26.67 35.56 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "7ca23191-3f30-4250-be03-975eb2a9d6a6")
+	)
+	(label "C5"
+		(at 129.54 106.68 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "7d056320-e0ab-45e3-8abe-71e6da3cb0a7")
+	)
+	(label "finger_index_bottom"
+		(at 109.22 88.9 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "7da2f470-0adc-4d8f-8e5a-552c9a354973")
+	)
+	(label "LED_26"
+		(at 170.18 50.8 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "81412db9-e981-4ffa-a96c-70e7caa6caa7")
+	)
+	(label "LED_4"
+		(at 271.78 50.8 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "827cf7f7-1e32-4671-9a20-c79df4acd3d9")
+	)
+	(label "finger_outer_home"
+		(at 26.67 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "87c7a328-92cc-48c3-8856-ef263fc88512")
+	)
+	(label "finger_ring_home"
+		(at 67.31 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "88a7a162-40c1-4aa9-b771-e388457f3cd6")
+	)
+	(label "finger_pinky_top"
+		(at 41.91 53.34 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "910e6e12-58e9-401f-b0e4-1742c08726a4")
+	)
+	(label "thumb_mid_fan"
+		(at 67.31 106.68 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "94bebc06-a767-4619-9dc8-684ce59a58e9")
+	)
+	(label "LED_5"
+		(at 271.78 35.56 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "96427c4e-0420-4d26-89b1-ff4873c2a4e5")
+	)
+	(label "LED_2"
+		(at 271.78 81.28 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "9646c85e-3e92-4194-90d6-4beea6922ac4")
+	)
+	(label "LED_10"
+		(at 251.46 50.8 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "973a395e-e61d-41d7-83da-e1be79a5d049")
+	)
+	(label "C3"
+		(at 82.55 106.68 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "a3cdeff8-54f5-494c-a491-ecca80197678")
+	)
+	(label "RST"
+		(at 41.91 156.21 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ae39d81a-f1e8-4ecb-b499-6833da4c6618")
+	)
+	(label "LED_11"
+		(at 231.14 66.04 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ae460dd6-e073-481d-a3d0-e9bffdf6a82f")
+	)
+	(label "finger_index_bottom"
+		(at 109.22 88.9 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ae5b8150-9b81-41a9-ad5b-027740d148cc")
+	)
+	(label "LED_4"
+		(at 271.78 81.28 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b2a078c7-52f5-4cdb-95f7-3aa73c5d4255")
+	)
+	(label "thumb_near_fan"
+		(at 67.31 106.68 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b37ddbf1-5d97-4bdc-9d55-a50f189b991e")
+	)
+	(label "finger_outer_home"
+		(at 26.67 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b83c667e-90bc-40f8-9d3a-5f16d3016ee0")
+	)
+	(label "thumb_far_fan"
+		(at 109.22 106.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b8dfc464-69a7-4f95-868f-203e81691371")
+	)
+	(label "LED_25"
+		(at 170.18 66.04 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "bcbd6036-eaf6-48c9-a5f8-984495930367")
+	)
+	(label "LED_8"
+		(at 251.46 50.8 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bcfbee96-93b0-4dd2-bebf-f04e04b3abef")
+	)
+	(label "LED_9"
+		(at 251.46 66.04 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "bd2091df-ee5a-427a-ad07-ccfa18708603")
+	)
+	(label "LED_7"
+		(at 251.46 35.56 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "bff750ad-3ea8-47e0-8dc8-5302f2305096")
+	)
+	(label "LED_23"
+		(at 190.5 35.56 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c6ace783-7a6a-49c4-ab22-2428be6cb030")
+	)
+	(label "LED_13"
+		(at 231.14 66.04 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c7f747ac-9baa-493c-919b-c645c119be0e")
+	)
+	(label "C1"
+		(at 41.91 35.56 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c8e1e0e4-bfe8-42a0-a8a7-20e827556d35")
+	)
+	(label "finger_inner_bottom"
+		(at 124.46 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ca9c0729-3b4e-4ed5-a7da-1fc443d728f1")
+	)
+	(label "C1"
+		(at 41.91 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cb735afd-aa7a-46f5-9b32-588c48e0977e")
+	)
+	(label "LED_20"
+		(at 210.82 81.28 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "cd680607-031e-440d-9fbb-e0c9acd24a24")
+	)
+	(label "LED_16"
+		(at 210.82 50.8 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ce2e89c1-9a84-4800-a45f-9284a8aeb0d5")
+	)
+	(label "LED_9"
+		(at 251.46 35.56 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ce39ba62-fcb7-47ca-beb4-d66da8b0dc8d")
+	)
+	(label "C5"
+		(at 124.46 35.56 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d0aaa3dc-a80e-490d-aeff-25d1a0e56743")
+	)
+	(label "finger_inner_home"
+		(at 124.46 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d3bf6592-8270-4bc6-a4bd-1638397e56ca")
+	)
+	(label "finger_index_top"
+		(at 109.22 53.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d3e11bf1-b672-4653-91e8-54135e0858b1")
+	)
+	(label "LED_24"
+		(at 170.18 20.32 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d4625c34-53bd-474d-984a-6cd5ab2a4d11")
+	)
+	(label "LED_14"
+		(at 231.14 50.8 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d6399a1f-87df-4c75-b052-4fb07e258035")
+	)
+	(label "C5"
+		(at 124.46 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d6798314-ca07-4327-9306-a63c0ebd500c")
+	)
+	(label "C3"
+		(at 82.55 35.56 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "dbc87c69-06e5-41af-a75f-abec1491881e")
+	)
+	(label "LED_7"
+		(at 271.78 35.56 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "dcc75685-c072-43af-85f5-12d03057af4d")
+	)
+	(label "LED_2"
+		(at 261.62 101.6 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "dded0698-1e19-4547-9f2e-823b225c4cb1")
+	)
+	(label "finger_index_num"
+		(at 109.22 35.56 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "deb9ec68-9803-462d-9741-c1ec76f46c6d")
+	)
+	(label "thumb_far_fan"
+		(at 82.55 106.68 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "df5df364-3a53-48f9-97a9-7b8f7bf56f74")
+	)
+	(label "LED_8"
+		(at 251.46 20.32 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e3416d4c-de7f-4abc-913a-e2f951bffabd")
+	)
+	(label "LED_12"
+		(at 231.14 50.8 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e3c59e25-7b7f-467e-8ee4-fc8f78d1b85c")
+	)
+	(label "finger_middle_home"
+		(at 82.55 71.12 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "e9c41eca-2364-4d53-8776-65b7aadb7815")
+	)
+	(label "LED_17"
+		(at 210.82 35.56 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "eb518738-3b35-4f42-90f8-3132911e3b39")
+	)
+	(label "finger_outer_num"
+		(at 26.67 35.56 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "eb5cd00a-1311-4810-bb88-10dc2b3b98dc")
+	)
+	(label "C3"
+		(at 82.55 71.12 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "eb686aab-9b8c-45f0-93f1-2339c12c03ee")
+	)
+	(label "finger_ring_top"
+		(at 67.31 53.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ee4a10fe-5c01-42e5-a231-441f543c7078")
+	)
+	(label "LED_27"
+		(at 170.18 66.04 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "efc06449-fa37-4de9-98e8-b127fc4e80df")
+	)
+	(label "LED_16"
+		(at 210.82 20.32 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f01bbba1-4c02-4527-a1ea-e5d3ae1be392")
+	)
+	(label "LED_18"
+		(at 210.82 81.28 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "f1817da2-09dc-4430-b32b-f107838601ca")
+	)
+	(label "LED_18"
+		(at 210.82 50.8 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f7f88ebc-4c32-412d-9e3b-f4578073c22f")
+	)
+	(label "C5"
+		(at 124.46 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f82e7110-ce4e-4e67-a567-320f66274eb5")
+	)
+	(label "LED_12"
+		(at 251.46 81.28 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "f9f6f784-c66e-4f18-80fa-b6fea5b398c4")
+	)
+	(label "finger_middle_top"
+		(at 82.55 53.34 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "fb41ad43-c372-4f90-8065-abd3e5e44472")
+	)
+	(label "LED_17"
+		(at 210.82 66.04 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ffde6465-6eea-4709-ae03-3aaf7be4f928")
+	)
+	(global_label "GND"
 		(shape input)
 		(at 180.34 82.55 270)
 		(fields_autoplaced yes)
@@ -5660,7 +6790,7 @@
 			)
 		)
 	)
-	(global_label "LED_D5V"
+	(global_label "LED_1"
 		(shape input)
 		(at 276.86 101.6 270)
 		(fields_autoplaced yes)
@@ -5706,7 +6836,7 @@
 			)
 		)
 	)
-	(global_label "LCD_CLK"
+	(global_label "ROLLUP"
 		(shape input)
 		(at 72.39 176.53 0)
 		(fields_autoplaced yes)
@@ -5718,7 +6848,7 @@
 		)
 		(uuid "282cece4-a67e-4b88-ade0-0b88ae80a55c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 83.479 176.53 0)
+			(at 82.6324 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5728,7 +6858,7 @@
 			)
 		)
 	)
-	(global_label "ROLLUP"
+	(global_label "GND"
 		(shape input)
 		(at 144.78 101.6 0)
 		(fields_autoplaced yes)
@@ -5772,7 +6902,7 @@
 			)
 		)
 	)
-	(global_label "LED_D3V"
+	(global_label "GND"
 		(shape input)
 		(at 262.89 149.86 0)
 		(fields_autoplaced yes)
@@ -5904,7 +7034,7 @@
 			)
 		)
 	)
-	(global_label "ROLLDN"
+	(global_label "LCD_DC"
 		(shape input)
 		(at 72.39 168.91 0)
 		(fields_autoplaced yes)
@@ -5916,7 +7046,7 @@
 		)
 		(uuid "41d36a0b-c904-4f0a-8972-f307b9084f22")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 82.6324 168.91 0)
+			(at 82.4509 168.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5926,7 +7056,7 @@
 			)
 		)
 	)
-	(global_label "5V"
+	(global_label "GND"
 		(shape input)
 		(at 232.41 109.22 180)
 		(fields_autoplaced yes)
@@ -5950,7 +7080,7 @@
 			)
 		)
 	)
-	(global_label "LCD_DIN"
+	(global_label "ROLLDN"
 		(shape input)
 		(at 72.39 179.07 0)
 		(fields_autoplaced yes)
@@ -5962,7 +7092,7 @@
 		)
 		(uuid "4c034023-b8dc-412d-9e74-9f5102ade2a4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 83.1162 179.07 0)
+			(at 82.6324 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5972,7 +7102,7 @@
 			)
 		)
 	)
-	(global_label "GND"
+	(global_label "5V"
 		(shape input)
 		(at 275.59 93.98 0)
 		(fields_autoplaced yes)
@@ -6130,7 +7260,7 @@
 			)
 		)
 	)
-	(global_label "C5"
+	(global_label "finger_inner_top"
 		(shape input)
 		(at 129.54 22.86 90)
 		(fields_autoplaced yes)
@@ -6306,7 +7436,7 @@
 			)
 		)
 	)
-	(global_label "C3"
+	(global_label "finger_middle_bottom"
 		(shape input)
 		(at 87.63 22.86 90)
 		(fields_autoplaced yes)
@@ -6350,7 +7480,7 @@
 			)
 		)
 	)
-	(global_label "C1"
+	(global_label "finger_pinky_bottom"
 		(shape input)
 		(at 46.99 22.86 90)
 		(fields_autoplaced yes)
@@ -6394,7 +7524,7 @@
 			)
 		)
 	)
-	(global_label "GND"
+	(global_label "ROLLDN"
 		(shape input)
 		(at 144.78 104.14 0)
 		(fields_autoplaced yes)
@@ -6614,7 +7744,7 @@
 			)
 		)
 	)
-	(global_label "GND"
+	(global_label "5V"
 		(shape input)
 		(at 162.56 82.55 270)
 		(fields_autoplaced yes)
@@ -6792,7 +7922,7 @@
 			)
 		)
 	)
-	(global_label "ROLLDN"
+	(global_label "ROLLUP"
 		(shape input)
 		(at 144.78 106.68 0)
 		(fields_autoplaced yes)
@@ -6880,7 +8010,7 @@
 			)
 		)
 	)
-	(global_label "LCD_DC"
+	(global_label "LCD_DIN"
 		(shape input)
 		(at 72.39 173.99 0)
 		(fields_autoplaced yes)
@@ -6892,7 +8022,7 @@
 		)
 		(uuid "dd4fbdce-2bde-4f3a-86ac-84fc5ca0a0f3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 82.4509 173.99 0)
+			(at 83.1162 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6924,7 +8054,7 @@
 			)
 		)
 	)
-	(global_label "ROLLUP"
+	(global_label "LCD_BL"
 		(shape input)
 		(at 72.39 166.37 0)
 		(fields_autoplaced yes)
@@ -6936,7 +8066,7 @@
 		)
 		(uuid "e8ec0190-d030-4e5e-9c57-39b73cc0021a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 82.6324 166.37 0)
+			(at 82.209 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6990,7 +8120,7 @@
 			)
 		)
 	)
-	(global_label "LCD_BL"
+	(global_label "LCD_CLK"
 		(shape input)
 		(at 72.39 171.45 0)
 		(fields_autoplaced yes)
@@ -7002,7 +8132,7 @@
 		)
 		(uuid "f2ffbb09-8709-42e2-b914-b2af680938f2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 82.209 171.45 0)
+			(at 83.479 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7400,7 +8530,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "149b3225-0607-40ae-9b2d-ac2ad9cc1213")
-		(property "Reference" "U2"
+		(property "Reference" "U1"
 			(at 208.28 133.096 0)
 			(effects
 				(font
@@ -7466,7 +8596,7 @@
 		(instances
 			(project "TooManyKeys"
 				(path "/ec7761c0-3eb0-4554-8d4d-14126f86a036"
-					(reference "U2")
+					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -10884,7 +12014,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "aadf19ec-6279-4873-8e70-bf00feb34b13")
-		(property "Reference" "U3"
+		(property "Reference" "U2"
 			(at 275.082 129.794 90)
 			(effects
 				(font
@@ -10945,7 +12075,7 @@
 		(instances
 			(project "TooManyKeys"
 				(path "/ec7761c0-3eb0-4554-8d4d-14126f86a036"
-					(reference "U3")
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -11704,7 +12834,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 137.414 97.79 0)
 			(effects
 				(font
