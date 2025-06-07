@@ -24,16 +24,16 @@ module.exports = {
     P3: { type: 'net', value: undefined },
     P4: { type: 'net', value: 'GND' },    
     p1_via: false,
-    p1_via_size: 0.4, //JLCPCB no-extra-charge minimum 0.4mm
+    p1_via_size: 0.5, //Max fitting inside pad is 0.5mm, JLCPCB no-extra-charge minimum 0.4mm. 
     p1_via_hole: 0.3, //JLCPCB no-extra-charge minimum 0.3mm
     p2_via: false,
-    p2_via_size: 0.4,
+    p2_via_size: 0.5,
     p2_via_hole: 0.3,
     p3_via: false,
-    p3_via_size: 0.4,
+    p3_via_size: 0.5,
     p3_via_hole: 0.3,
     p4_via: false,
-    p4_via_size: 0.4,
+    p4_via_size: 0.5,
     p4_via_hole: 0.3,
   },
   body: p => {

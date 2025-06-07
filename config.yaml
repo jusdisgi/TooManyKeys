@@ -2,7 +2,7 @@ meta:
   engine: 4.1.0
   name: TooManyKeys
   version: 0.1
-  ref: &kb_ref "Too Many Keys v0.1"
+  ref: &kb_ref "Too Many Keys v0.2"
   author: huntercook
   url: &kb_url https://github.com/jusdisgi/TooManyKeys
   footprint: &switch_footprint "switch_pg1316s"
@@ -102,16 +102,14 @@ units:
   fillet_radius: 0.5
   pwr_trace_width: 0.25
   gnd_trace_width: 0.25
-  signal_trace_width: 0.15
-  via_size: 0.8 # JLCPCB min 0.56 | KiCad default 0.8
-  via_drill: 0.4 # JLCPCB min 0.3 | KiCad default 0.4
+  signal_trace_width: 0.2
+  via_size: 0.5 # JLCPCB min 0.56 | KiCad default 0.8
+  via_drill: 0.3 # JLCPCB min 0.3 | KiCad default 0.4
 
   # Case variables
   case_wall_thickness: 1.0
   pcb_to_case_wall_tolerance: 0.2
   bottom_plate_thickness: 1.0
-  top_plate_thickness: 1.0
-  internal_distance_between_plates: 4
 
   # Figer column stagger
   stagger_finger_pinky: 1
@@ -145,9 +143,9 @@ points:
       key:
         padding: kp
         spread: ks
-        tags: 
-          - key
-          - finger_key
+        # tags: 
+        #   - key
+        #   - finger_key
       anchor:
         rotate: hand_rotation
         shift: [60,-160] # Fix KiCad placement
@@ -277,9 +275,9 @@ points:
         padding: 0
         spread: 0
         stagger: 0
-        tags:
-          - key
-          - thumb_key
+        # tags:
+        #   - key
+        #   - thumb_key
       anchor:
         ref: finger_index_bottom
         shift: [8, -20]
@@ -318,9 +316,9 @@ points:
     # Helper points
     roller:
       key:
-        tags:
-          helper
-          encoder
+        # tags:
+        #   helper
+        #   encoder
         column_net: C5
         row_net: R3
       anchor: 
@@ -328,318 +326,174 @@ points:
           shift: [7,22]
           rotate: 90  
 
-
-    bav70_num1: &bav70proto
+    # The order these diodes are placed is important here.
+    # To match up with the schematic they need to go in the
+    # same "up the columns left to right" order ergogen creates
+    # the row/column points in.
+    bav70_bottom1: &bav70proto #Ref: D1
       key:
-        tags:
-          helper
-          diode
-        A1: finger_outer_num
-        A2: finger_pinky_num
-        C: R0
+        # tags:
+        #   helper
+        #   diode
+        A1: outer_bottom
+        A2: pinky_bottom
+        C: R3
       anchor: &bav70anchor
         - ref: finger_middle_bottom
-          shift: [-23,-24]
+          shift: [-5,-17]
           rotate: -90
-    bav70_num2:
+    bav70_home1: #Ref: D2
       <<:  *bav70proto
-      key.A1: finger_ring_num
-      key.A2: finger_middle_num
-      key.C: R0
-      anchor:
-        <<: *bav70anchor
-        shift: [-17,-24]
-    bav70_num3:
-      <<:  *bav70proto
-      key.A1: finger_index_num
-      key.A2: finger_inner_num
-      key.C: R0
-      anchor:
-        <<: *bav70anchor
-        shift: [-11,-24]
-    bav70_top1:
-      <<:  *bav70proto
-      key.A1: finger_outer_top
-      key.A2: finger_pinky_top
-      key.C: R1
-      anchor:
-        <<: *bav70anchor
-        shift: [-5,-24]
-    bav70_top2:
-      <<:  *bav70proto
-      key.A1: finger_ring_top
-      key.A2: finger_middle_top
-      key.C: R1
-      anchor:
-        <<: *bav70anchor
-        shift: [1,-24]
-    bav70_top3:
-      <<:  *bav70proto
-      key.A1: finger_index_top
-      key.A2: finger_inner_top
-      key.C: R1
-      anchor:
-        <<: *bav70anchor
-        shift: [7,-24]
-    bav70_home1:
-      <<:  *bav70proto
-      key.A1: finger_outer_home
-      key.A2: finger_pinky_home
+      key.A1: outer_home
+      key.A2: pinky_home
       key.C: R2
       anchor:
         <<: *bav70anchor
         shift: [-23,-17]
-    bav70_home2:
+    bav70_top1: #Ref: D3
       <<:  *bav70proto
-      key.A1: finger_ring_home
-      key.A2: finger_middle_home
-      key.C: R2
+      key.A1: outer_top
+      key.A2: pinky_top
+      key.C: R1
       anchor:
         <<: *bav70anchor
-        shift: [-17,-17]
-    bav70_home3:
+        shift: [-5,-24]
+    bav70_num1: #Ref: D4
       <<:  *bav70proto
-      key.A1: finger_index_home
-      key.A2: finger_inner_home
-      key.C: R2
+      key.A1: outer_num
+      key.A2: pinky_num
+      key.C: R0
       anchor:
         <<: *bav70anchor
-        shift: [-11,-17]
-    bav70_bottom1:
+        shift: [-23,-24]
+    bav70_bottom2: #Ref: D5
       <<:  *bav70proto
-      key.A1: finger_pinky_bottom
-      key.A2: finger_outer_bottom
-      key.C: R3
-      anchor:
-        <<: *bav70anchor
-        shift: [-5,-17]
-    bav70_bottom2:
-      <<:  *bav70proto
-      key.A1: finger_middle_bottom
-      key.A2: finger_ring_bottom
+      key.A1: ring_bottom
+      key.A2: middle_bottom
       key.C: R3
       anchor:
         <<: *bav70anchor
         shift: [1,-17]
-    bav70_bottom3:
+    bav70_home2: #Ref: D6
       <<:  *bav70proto
-      key.A1: finger_index_bottom
-      key.A2: finger_inner_bottom
+      key.A1: ring_home
+      key.A2: middle_home
+      key.C: R2
+      anchor:
+        <<: *bav70anchor
+        shift: [-17,-17]
+    bav70_top2: #Ref: D7
+      <<:  *bav70proto
+      key.A1: ring_top
+      key.A2: middle_top
+      key.C: R1
+      anchor:
+        <<: *bav70anchor
+        shift: [1,-24]
+    bav70_num2: #Ref: D8
+      <<:  *bav70proto
+      key.A1: ring_num
+      key.A2: middle_num
+      key.C: R0
+      anchor:
+        <<: *bav70anchor
+        shift: [-17,-24]
+    bav70_bottom3: #Ref: D9
+      <<:  *bav70proto
+      key.A1: index_bottom
+      key.A2: inner_bottom
       key.C: R3
       anchor:
         <<: *bav70anchor
         shift: [7,-17]
-    bav70_fan1:
+    bav70_home3: #Ref: D10
       <<:  *bav70proto
-      key.A1: roller
-      key.A2: thumb_near_fan
+      key.A1: index_home
+      key.A2: inner_home
+      key.C: R2
+      anchor:
+        <<: *bav70anchor
+        shift: [-11,-17]
+    bav70_top3: #Ref: D11
+      <<:  *bav70proto
+      key.A1: index_top
+      key.A2: inner_top
+      key.C: R1
+      anchor:
+        <<: *bav70anchor
+        shift: [7,-24]
+    bav70_num3: #Ref: D12
+      <<:  *bav70proto
+      key.A1: index_num
+      key.A2: inner_num
+      key.C: R0
+      anchor:
+        <<: *bav70anchor
+        shift: [-11,-24]
+
+    bav70_fan1: #Ref: D13
+      <<:  *bav70proto
+      key.A1: near_fan
+      key.A2: mid_fan
       key.C: R4
       anchor:
         <<: *bav70anchor
         shift: [13,-17]
-    bav70_fan2:
+    bav70_fan2: #Ref: D14
       <<:  *bav70proto
-      key.A1: thumb_mid_fan
-      key.A2: thumb_far_fan
+      key.A1: far_fan
+      key.A2: roller
       key.C: R4
       anchor:
         <<: *bav70anchor
         shift: [13,-24]
 
     screw_pcb_left_top:
-      key.tags:
-        - helper
-        - screw
       anchor:
         - ref: finger_outer_num
           shift: [10, 12]
     screw_pcb_left_bottom:
-      key.tags:
-        - helper
-        - screw
       anchor:
         - ref: finger_pinky_bottom
           shift: [-12,-14]
     screw_pcb_left_mid_top:
-      key.tags:
-        - helper
-        - screw
       anchor:
         - ref: finger_middle_num
           shift: [-13, 9]
     screw_pcb_right_mid_top:
-      key.tags:
-        - helper
-        - screw
       anchor:
         - ref: finger_middle_num
           shift: [13, 9]
-    # These were obviated by the LCD mounting screws.
-    # screw_pcb_rightish_top:
-    #   key.tags:
-    #     - helper
-    #     - screw
-    #   anchor:
-    #     - ref: finger_inner_num
-    #       shift: [14, 3]
-    # screw_pcb_right_top:
-    #   key.tags:
-    #     - helper
-    #     - screw
-    #   anchor:
-    #     - ref: finger_inner_top
-    #       shift: [42, 14]
     screw_pcb_thumb_left:
-      key.tags:
-        - helper
-        - screw
       anchor:
         - ref: thumb_near_fan
           shift: [-15, -10]
     screw_pcb_thumb_right:
-      key.tags:
-        - helper
-        - screw
       anchor:
         - ref: thumb_far_fan
           shift: [0, -12]
     screw_pcb_thumb_top:
-      key.tags:
-        - helper
-        - screw
       anchor:
         - ref: thumb_far_fan
           shift: [10,12]
     screw_mcu_cover_left:
-      key.tags:
-        - helper
-        - screw
       anchor:
         - ref: finger_inner_bottom
           shift: [0.67 ks + 0.032, -0.15 kp -0.001]
     screw_mcu_cover_right:
-      key.tags:
-        - helper
-        - screw
       anchor:
         - ref: finger_inner_bottom
           shift: [1.45 ks - 0.356, -0.6 ks +0.03]
+  mirror:
+    ref: thumb_far_fan
+    distance: 3kx
 
 outlines:
-  _debug_points:
-    - what: rectangle
-      where: true
-      size: [6,0.01]
-    - what: rectangle
-      where: true
-      size: [0.01,4]
-    - what: circle
-      where: true
-      radius: 0.4
-      adjust:
-        shift: [3,0]
-    - what: circle
-      where: true
-      radius: 0.4
-      adjust:
-        shift: [0,2]
-    - what: rectangle
-      where: [key]
-      size: [kx, ky]
-      operation: stack
-    - what: rectangle
-      where: /key/
-      size: [kcow, kcoh]
-      operation: stack
-    - what: circle
-      where: [screw]
-      radius: 2
-      operation: stack
-  _keycap_outlines:
-    - what: rectangle
-      fillet: 2
-      where: [key]
-      size: [keycw, keych]
-  _hex_outline:
-    - what: rectangle
-      where: [key]
-      size: [9.2376,16]
-      adjust:
-        rotate: 0
-    - what: rectangle
-      where: [key]
-      size: [9.2376,16]
-      adjust:
-        rotate: 60
-    - what: rectangle
-      where: [key]
-      size: [9.2376,16]
-      adjust:
-        rotate: -60
-  _switch_cutouts:
-    - what: rectangle
-      where: /key/
-      size: [kcow, kcoh]
-  # bessie:
-  #   - what: path
-  #     segments:
-  #       # NW
-  #       - type: line
-  #         points:
-  #           - ref: finger_outer_bottom
-  #             shift: [-12, -12]
-  #           - ref: finger_outer_num
-  #             shift: [-12, 12]
-  #       # N
-  #       - type: bezier
-  #         points:
-  #           - ref: finger_ring_num
-  #             shift: [0,16]
-  #           - ref: finger_middle_num
-  #             shift: [12, 10]
-  #       # NE
-  #       - type: line
-  #         points:
-  #           - ref: finger_index_num
-  #             shift: [12, 12]
-  #           - ref: finger_inner_num
-  #             shift: [30,10]
-  #       - type: bezier
-  #         points:
-  #           - ref: finger_inner_num
-  #             shift: [40,6]
-  #           - ref: finger_inner_top
-  #             shift: [42,0]
-        
-  #       # E
-  #       - type: bezier
-  #         points:
-  #           - ref: finger_inner_home
-  #             shift: [36, -12]
-  #           - ref: thumb_far_fan
-  #             shift: [14, 12]
-  #       # SW
-  #       - type: line
-  #         points:
-  #           - ref: thumb_far_fan
-  #             shift: [12, -12]
-  #           - ref: thumb_near_fan
-  #             shift: [-12, -12]
-  #       # SE
-  #       - type: bezier
-  #         points:
-  #           - ref: finger_middle_bottom
-  #             shift: [12, -12]
-  #           - ref: finger_outer_bottom
-  #             shift: [-12, -12]
-  #     fillet: 2
   board_left:
     - what: polygon
       points:
         - ref: thumb_far_fan
           shift: [12,-10]
-        # - ref: finger_middle_bottom
-        #   shift: [0,-25]
         - ref: finger_outer_bottom
           shift: [-12,-10]
         - ref: finger_outer_num
@@ -648,65 +502,97 @@ outlines:
           shift: [-12,12]
         - ref: finger_middle_num
           shift: [12,12]
-        # - ref: finger_middle_num
-        #   shift: [0,14]
         - ref: finger_inner_num
           shift: [45,6]
         - ref: finger_inner_bottom
           shift: [45,-23.45]
       fillet: 6
-  _screws:
-    - what: circle
-      where: /screw_pcb/
-      radius: screw_radius
-  _screw_heads:
-    - what: circle
-      where: /screw_pcb/
-      radius: screw_head_radius
-  _spacers:
-    - what: circle
-      where: /screw_pcb/
-      radius: spacer_radius
-  pcb:
+  board_right:
+    - what: polygon
+      points:
+        - ref: mirror_thumb_far_fan
+          shift: [12,-10]
+        - ref: mirror_finger_outer_bottom
+          shift: [-12,-10]
+        - ref: mirror_finger_outer_num
+          shift: [-12,12]
+        - ref: mirror_finger_middle_num
+          shift: [-12,12]
+        - ref: mirror_finger_middle_num
+          shift: [12,12]
+        - ref: mirror_finger_inner_num
+          shift: [45,6]
+        - ref: mirror_finger_inner_bottom
+          shift: [45,-23.45]
+      fillet: 6
+  case_inner_wall_left:
     - what: outline
       name: board_left
+      expand: pcb_to_case_wall_tolerance
+  case_outer_wall_left:
     - what: outline
-      name: _spacers
-      operation: subtract
-  _frontplate_outline:
-    - what: outline
-      name: board_left
-      fillet: fillet_radius
-    - what: outline
-      name: _switch_cutouts
-      operation: subtract
-  frontplate:
-    - what: outline
-      name: _frontplate_outline
-    - what: outline
-      name: _screws
-      operation: subtract
+      name: case_inner_wall_left
+      expand: case_wall_thickness  
+  keycap_outlines_left:
+    - what: rectangle
+      fillet: 2
+      where: /^finger|^thumb|^roller/ 
+      size: [keycw, keych] # Roller just happens to be 18x18 same as cherry caps
 
 pcbs:
-  toomanykeys:
+  toomanykeys_left:
     template: kicad8
     outlines: 
       main:
         outline: board_left
-    footprints:
-      m2_screwholes:
-        what: mounting_hole_npth 
-        where: /screw_pcb/
+    footprints:      
+      mcu:
+        what: mcu_nice_nano
+        where: finger_inner_num
+        adjust:
+          shift: [27.5,-8.2]
+          rotate: -8
         params:
-          hole_size: screw_diameter
-          hole_drill: screw_diameter
-
+          side: F
+          reverse_mount: false
+          include_extra_pins: true   
+          mcu_3dmodel_filename: '\${INFUSED_KIM_MODELS}/Nice_Nano_V2.step'
+          mcu_3dmodel_xyz_offset: [0, 0, 0]
+          mcu_3dmodel_xyz_rotation: [0, 0, 0]
+          mcu_3dmodel_xyz_scale: [1, 1, 1]
+          P1: 'C0' # Left Top
+          P0: 'C1'
+          P2: 'C2'
+          P3: 'C3'
+          P4: 'LCD_BL'
+          P5: 'LCD_DC'
+          P6: 'LCD_CLK' # Needs High Freq 
+          P7: 'LCD_DIN' # Needs High Freq
+          P8: 'C4'
+          P9: 'C5'
+          P101: 'LCD_CS' #Left Extra
+          P102: 'LCD_RST'
+          P107: 'ROLLDN'
+          RAW: 'RAW' #Right Top
+          GND: 'GND'
+          RST: 'RST'
+          VCC: '3V3'
+          P21: '5V_EN'
+          P20: 'LED_D3V'
+          P19: 'R0'
+          P18: 'R1'
+          P15: 'R2'
+          P14: 'R3'
+          P16: 'R4'
+          P10: 'ROLLUP'
       key_switches:
         what: *switch_footprint
-        where: /key/
+        where: /^finger|^thumb/
+        adjust:
+          rotate: switch_rotation
         params:
           from: "{{column_net}}"
-          to: "{{name}}"
+          to: "{{colrow}}"
           reversible: false
           side: 'F'
           large_p1: false
@@ -723,8 +609,44 @@ pcbs:
           mp_gnd: true
           key_3dmodel_filename: '\${HLC_MODELS}/PG1316S.STEP'
           key_3dmodel_xyz_offset: [-4.25, -7.25, -10.25]
+      per_key_leds_dn:
+        what: led_ws2812b_2020
+        where: /^finger_outer|^finger_ring|^finger_index/ # These rows route best upside down
         adjust:
-          rotate: switch_rotation
+          shift: [led_pos_x, led_pos_y]
+          rotate: led_rotation + 180
+        params:
+          P1: "{{key.led_next}}" #DOUT
+          P2: GND
+          P3: "{{key.led_prev}}" #DIN
+          P4: 5V
+          p1_via: false
+          p2_via: true
+          p2_via_size: 0.5
+          p2_via_hole: 0.3
+          p3_via: false
+          p4_via: true
+          p4_via_size: 0.5
+          p4_via_hole: 0.3
+      per_key_leds_up:
+        what: led_ws2812b_2020
+        where: /^finger_pinky|^finger_middle|^finger_inner|^thumb/ # These rows route best right-side up
+        adjust:
+          shift: [led_pos_x, led_pos_y]
+          rotate: led_rotation
+        params:
+          P1: "{{key.led_next}}" #DOUT
+          P2: GND
+          P3: "{{key.led_prev}}" #DIN
+          P4: 5V
+          p1_via: false
+          p2_via: true
+          p2_via_size: 0.5
+          p2_via_hole: 0.3
+          p3_via: false
+          p4_via: true
+          p4_via_size: 0.5
+          p4_via_hole: 0.3
       roller:
         what: roller_encoder_ckw12
         where: roller
@@ -740,7 +662,7 @@ pcbs:
           roller_3dmodel_xyz_scale: [1, 1, 1]
       bav70:
         what: diode_bav70_larssont
-        where: /diode/
+        where: /^bav70/
         params:
           A1: "{{A1}}"
           A2: "{{A2}}"
@@ -748,80 +670,34 @@ pcbs:
           diode_3dmodel_filename: '\${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOT-23.step'
           diode_3dmodel_xyz_rotation: [0, 0, 90]
           diode_3dmodel_xyz_offset: [0, 0, 0]
-      mcu:
-        what: mcu_nice_nano
-        where: finger_inner_num
-        params:
-          side: F
-          reverse_mount: true
-          include_extra_pins: true   
-          mcu_3dmodel_filename: '\${INFUSED_KIM_MODELS}/Nice_Nano_V2.step'
-          mcu_3dmodel_xyz_offset: [0, 0, 0]
-          mcu_3dmodel_xyz_rotation: [0, 0, 0]
-          mcu_3dmodel_xyz_scale: [1, 1, 1]
-          RAW: 'RAW'
-          GND: 'GND'
-          RST: 'RST'
-          VCC: '3V3'
-          P21: 'C0'
-          P20: 'C1'
-          P19: 'C2'
-          P18: 'R0'
-          P15: 'R1'
-          P14: 'R2'
-          P16: 'R3'
-          P10: 'R4'
-          P1: '5V_EN'
-          P0: 'LED_D3V'
-          P2: 'C4'
-          P3: 'C5'
-          P4: 'LCD_BL'
-          P5: 'LCD_DC'
-          P6: 'LCD_CLK'
-          P7: 'LCD_DIN'
-          P8: 'ROLLUP'
-          P9: 'ROLLDN'
-          P101: 'LCD_RST'
-          P102: 'LCD_CS'
-          P107: 'C3'
-        adjust:
-          shift: [27.5,-8.2]
-          rotate: -8
-      apple_watch:
-        what: lcd_waveshare_1in69
-        where: finger_inner_num
-        params:
-          lcd_3dmodel_filename: '\${HLC_MODELS}/waveshare_LCD_1in69.stp'
-          lcd_3dmodel_xyz_offset: [0, -1.5, 8]
-          lcd_3dmodel_xyz_rotation: [0, 0, 180]
-          lcd_3dmodel_xyz_scale: [1, 1, 1]
-        adjust:
-          shift: [28,-23.5]
-          rotate: 180
       on_off_switch:
         what: power_switch_smd_side
         where: finger_inner_bottom
+        adjust:
+          shift: [42.745,-8] #This X value lines up with the battery, change them together.
         params:
           from: RAW
           to: BAT_P
+          invert_behavior: true
           switch_3dmodel_filename: '\${INFUSED_KIM_MODELS}/Switch_Power.step'
           switch_3dmodel_xyz_rotation: [-90, 0, -90]
-        adjust:
-          shift: [42.745,-8] #This X value lines up with the battery, change them together.
       reset_switch:
         what: reset_switch_smd_side
         where: finger_inner_num
+        adjust:
+          shift: [15,7]
+          rotate: -8
         params:
           from: GND
           to: RST
           reset_switch_3dmodel_filename: '\${INFUSED_KIM_MODELS}/Switch_Reset.step'
           reset_switch_3dmodel_xyz_rotation: [-90, 0, 180]
-        adjust:
-          shift: [15,7]
-          rotate: -8
       battery_connector:  
         what: battery_connector_jst_ph_2
         where: finger_inner_bottom
+        adjust:
+          shift: [40,-18] #This X value lines up the + pad with the switch contact.
+          rotate: 180
         params:
           side: B
           BAT_P: BAT_P
@@ -831,31 +707,12 @@ pcbs:
           battery_connector_3dmodel_xyz_offset: [1, 0, 0]
           battery_connector_3dmodel_xyz_rotation: [0, 0, 180]
           battery_connector_3dmodel_xyz_scale: [1, 1, 1]
-        adjust:
-          shift: [40,-18] #This X value lines up the + pad with the switch contact.
-          rotate: 180
-      per_key_leds:
-        what: led_ws2812b_2020
-        where: /key/
-        params:
-          P1: "{{key.led_prev}}" #DIN
-          P2: 5V
-          P3: "{{key.led_next}}" #DOUT
-          P4: GND
-          p1_via: false
-          p2_via: true
-          p2_via_size: 0.5
-          p2_via_hole: 0.3
-          p3_via: false
-          p4_via: true
-          p4_via_size: 0.5
-          p4_via_hole: 0.3
-        adjust:
-          shift: [led_pos_x, led_pos_y]
-          rotate: led_rotation
       LCD_header:
         what: conn_molex_picoblade_smd_1x08_1mm25_horiz
         where: finger_inner_home
+        adjust:
+          shift: [28,0]
+          rotate: 0
         params:
           P1: 3V3
           P2: GND
@@ -865,6 +722,222 @@ pcbs:
           P6: LCD_DC
           P7: LCD_RST
           P8: LCD_BL
+      LCD_mount:
+        what: lcd_waveshare_1in69
+        where: finger_inner_num
+        adjust:
+          shift: [28,-23.5]
+          rotate: 180
+        params:
+          lcd_3dmodel_filename: '\${HLC_MODELS}/waveshare_LCD_1in69.stp'
+          lcd_3dmodel_xyz_offset: [0, -1.5, 8]
+          lcd_3dmodel_xyz_rotation: [0, 0, 180]
+          lcd_3dmodel_xyz_scale: [1, 1, 1]
+      m2_screwholes:
+        what: mounting_hole_npth 
+        where: /^screw_pcb/
+        params:
+          hole_size: screw_diameter
+          hole_drill: screw_diameter
+  toomanykeys_right:
+    template: kicad8
+    outlines: 
+      main:
+        outline: board_right
+    footprints:
+      mcu:
+        what: mcu_nice_nano
+        where: mirror_finger_inner_num
+        adjust:
+          shift: [27.5,-8.2]
+          rotate: -8
+        params:
+          side: F
+          reverse_mount: false
+          include_extra_pins: true   
+          mcu_3dmodel_filename: '\${INFUSED_KIM_MODELS}/Nice_Nano_V2.step'
+          mcu_3dmodel_xyz_offset: [0, 0, 0]
+          mcu_3dmodel_xyz_rotation: [0, 0, 0]
+          mcu_3dmodel_xyz_scale: [1, 1, 1]
+          P1: '5V_EN' # Left Top
+          P0: 'LED_D3V'
+          P2: 'R0'
+          P3: 'R1'
+          P4: 'LCD_BL'
+          P5: 'LCD_DC'
+          P6: 'LCD_CLK' # Needs High Freq 
+          P7: 'LCD_DIN' # Needs High Freq
+          P8: 'R2'
+          P9: 'R3'
+          P101: 'R4' #Left Extra
+          P102: 'LCD_CS'
+          P107: 'LCD_RST'
+          RAW: 'RAW' #Right Top
+          GND: 'GND'
+          RST: 'RST'
+          VCC: '3V3'
+          P21: 'C0'
+          P20: 'C1'
+          P19: 'C2'
+          P18: 'C3'
+          P15: 'C4'
+          P14: 'C5'
+          P16: 'ROLLUP'
+          P10: 'ROLLDN'
+      key_switches:
+        what: *switch_footprint
+        where: /^mirror_finger|^mirror_thumb/
+        adjust:
+          rotate: switch_rotation
+        params:
+          from: "{{column_net}}"
+          to: "{{colrow}}"
+          reversible: false
+          side: 'F'
+          large_p1: false
+          square_p1: true
+          square_p2: true
+          shift_p2: false
+          small_mp: false
+          pad_vias: true
+          pad_via_size: 0.5
+          pad_via_hole: 0.3
+          mp_vias: true
+          mp_via_size: 0.5
+          mp_via_hole: 0.3
+          mp_gnd: true
+          key_3dmodel_filename: '\${HLC_MODELS}/PG1316S.STEP'
+          key_3dmodel_xyz_offset: [-4.25, -7.25, -10.25]
+      per_key_leds_dn:
+        what: led_ws2812b_2020
+        where: /^mirror_finger_outer|^mirror_finger_ring|^mirror_finger_index|^mirror_thumb/ # These rows route best upside down, no thumbs here
+        adjust:
+          shift: [led_pos_x, led_pos_y]
+          rotate: led_rotation + 180
+        params:
+          P1: "{{key.led_next}}" #DOUT
+          P2: GND
+          P3: "{{key.led_prev}}" #DIN
+          P4: 5V
+          p1_via: false
+          p2_via: true
+          p2_via_size: 0.5
+          p2_via_hole: 0.3
+          p3_via: false
+          p4_via: true
+          p4_via_size: 0.5
+          p4_via_hole: 0.3
+      per_key_leds_up:
+        what: led_ws2812b_2020
+        where: /^mirror_finger_pinky|^mirror_finger_middle|^mirror_finger_inner/ # These rows route best right-side up, note thumbs differ from left
+        adjust:
+          shift: [led_pos_x, led_pos_y]
+          rotate: led_rotation
+        params:
+          P1: "{{key.led_next}}" #DOUT
+          P2: GND
+          P3: "{{key.led_prev}}" #DIN
+          P4: 5V
+          p1_via: false
+          p2_via: true
+          p2_via_size: 0.5
+          p2_via_hole: 0.3
+          p3_via: false
+          p4_via: true
+          p4_via_size: 0.5
+          p4_via_hole: 0.3
+      roller:
+        what: roller_encoder_ckw12
+        where: mirror_roller
+        adjust: 
+          rotate: 180
+        params:
+          S1: "{{column_net}}"
+          S2: "{{name}}"
+          A: ROLLUP
+          B: GND
+          C: ROLLDN
+          roller_3dmodel_filename: '\${HLC_MODELS}/ckw12_roller_enc.step'
+          roller_3dmodel_xyz_offset: [8, 21, -7.75]
+          roller_3dmodel_xyz_rotation: [0, 0, 90]
+          roller_3dmodel_xyz_scale: [1, 1, 1]
+      bav70:
+        what: diode_bav70_larssont
+        where: /^mirror_bav70/
+        params:
+          A1: "mirror_{{A1}}"
+          A2: "mirror_{{A2}}"
+          C: "{{C}}"
+          diode_3dmodel_filename: '\${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOT-23.step'
+          diode_3dmodel_xyz_rotation: [0, 0, 90]
+          diode_3dmodel_xyz_offset: [0, 0, 0]
+      on_off_switch:
+        what: power_switch_smd_side
+        where: mirror_finger_inner_bottom
+        adjust:
+          shift: [42.745,-8] #This X value lines up with the battery, change them together.
+          rotate: 180
+        params:
+          from: RAW
+          to: BAT_P
+          invert_behavior: false
+          switch_3dmodel_filename: '\${INFUSED_KIM_MODELS}/Switch_Power.step'
+          switch_3dmodel_xyz_rotation: [-90, 0, -90]
+      reset_switch:
+        what: reset_switch_smd_side
+        where: mirror_finger_inner_num
+        adjust:
+          shift: [15,7]
+          rotate: -8
+        params:
+          from: GND
+          to: RST
+          reset_switch_3dmodel_filename: '\${INFUSED_KIM_MODELS}/Switch_Reset.step'
+          reset_switch_3dmodel_xyz_rotation: [-90, 0, 180]
+      battery_connector:  
+        what: battery_connector_jst_ph_2
+        where: mirror_finger_inner_bottom
+        adjust:
+          shift: [40,-18] #This X value lines up the + pad with the switch contact.
+          rotate: 180
+        params:
+          side: B
+          BAT_P: BAT_P
+          BAT_N: GND
+          include_courtyard: true    
+          battery_connector_3dmodel_filename: '\${KICAD9_3DMODEL_DIR}/Connector_JST.3dshapes/JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal.step'
+          battery_connector_3dmodel_xyz_offset: [1, 0, 0]
+          battery_connector_3dmodel_xyz_rotation: [0, 0, 180]
+          battery_connector_3dmodel_xyz_scale: [1, 1, 1]
+      LCD_header:
+        what: conn_molex_picoblade_smd_1x08_1mm25_horiz
+        where: mirror_finger_inner_home
         adjust:
           shift: [28,0]
           rotate: 0
+        params:
+          P1: 3V3
+          P2: GND
+          P3: LCD_DIN
+          P4: LCD_CLK
+          P5: LCD_CS
+          P6: LCD_DC
+          P7: LCD_RST
+          P8: LCD_BL
+      LCD_mount:
+        what: lcd_waveshare_1in69
+        where: mirror_finger_inner_num
+        adjust:
+          shift: [28,-23.5]
+          rotate: 180
+        params:
+          lcd_3dmodel_filename: '\${HLC_MODELS}/waveshare_LCD_1in69.stp'
+          lcd_3dmodel_xyz_offset: [0, -1.5, 8]
+          lcd_3dmodel_xyz_rotation: [0, 0, 180]
+          lcd_3dmodel_xyz_scale: [1, 1, 1]
+      m2_screwholes:
+        what: mounting_hole_npth 
+        where: /^mirror_screw_pcb/
+        params:
+          hole_size: screw_diameter
+          hole_drill: screw_diameter

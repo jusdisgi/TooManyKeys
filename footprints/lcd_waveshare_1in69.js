@@ -11,10 +11,6 @@
 // Nets/Parameters
 //
 // side: F (default) for Front, B for Back
-// lcd_3dmodel_filename: file to use for 3d rendering. Available from the waveshare website or my github
-// lcd_3dmodel_xyz_offset: array to positionally offset, none by default.
-// lcd_3dmodel_xyz_rotation: array to rotate, none by default.
-// lcd_3dmodel_xyz_scale: scale, default is 1 in all directions.
 
 module.exports = {
   params: {
@@ -34,7 +30,7 @@ fp.push(`(footprint "LCD_1.69_Waveshare"`);
 fp.push(p.at);
 fp.push(`(layer "${(flip ? "B.Cu" : "F.Cu")}")`);
 fp.push(`(property "Reference" "${p.ref}" ${p.ref_hide} (at 0 0 ${p.r}) (layer "${p.side}.SilkS") (effects (font (size 1 1) (thickness 0.15))${ p.side === "B" ? " (justify mirror)" : ""}))`);
-
+fp.push(`(attr board_only)`); //Do not include in schematic
 fp.push(`(attr smd)`);
 
 // Unknown to kicad2ergogen
