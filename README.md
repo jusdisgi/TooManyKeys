@@ -5,12 +5,12 @@ Please take a look and let me know if you see anything wrong!
 
 ## Where is everything?
 [Left Half PCB](https://github.com/jusdisgi/TooManyKeys/blob/main/toomanykeys_left.kicad_pcb)
-[Left Half Schematic](https://github.com/jusdisgi/TooManyKeys/blob/main/toomanykeys_left.kicad_sch)
-
 [Right Half PCB](https://github.com/jusdisgi/TooManyKeys/blob/main/toomanykeys_right.kicad_pcb)
+
+[Left Half Schematic](https://github.com/jusdisgi/TooManyKeys/blob/main/toomanykeys_left.kicad_sch)
 [Right Half Schematic](https://github.com/jusdisgi/TooManyKeys/blob/main/toomanykeys_right.kicad_sch)
 
-[Ergogen config](https://github.com/jusdisgi/TooManyKeys/blob/main/config.yaml)
+[Ergogen Config](https://github.com/jusdisgi/TooManyKeys/blob/main/config.yaml)
 
 ## What's the status?
 I think it is finished. Please let me know what I've done horribly wronng.
