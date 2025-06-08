@@ -2,7 +2,7 @@ meta:
   engine: 4.1.0
   name: TooManyKeys
   version: 0.1
-  ref: &kb_ref "Too Many Keys v0.2"
+  ref: &kb_ref "Too Many Keys v1.0"
   author: huntercook
   url: &kb_url https://github.com/jusdisgi/TooManyKeys
   footprint: &switch_footprint "switch_pg1316s"
@@ -143,9 +143,6 @@ points:
       key:
         padding: kp
         spread: ks
-        # tags: 
-        #   - key
-        #   - finger_key
       anchor:
         rotate: hand_rotation
         shift: [60,-160] # Fix KiCad placement
@@ -155,7 +152,10 @@ points:
             column_net: C0
             # LED string begins at thumb_far_fan and snakes the columns:
             # up inner, down index, up middle, down ring, up pinky and
-            # down outer to end at finger_outer_bottom 
+            # down outer to end at finger_outer_bottom. If I knew then what
+            # I know now about the importance of Ref numbers to schematics
+            # and how ergogen creates those numbers, I would have done it
+            # in reverse. Switch ref S1 is finger_outer_bottom smh
           rows:
             num.key:
               led_prev: LED_23
@@ -275,9 +275,6 @@ points:
         padding: 0
         spread: 0
         stagger: 0
-        # tags:
-        #   - key
-        #   - thumb_key
       anchor:
         ref: finger_index_bottom
         shift: [8, -20]
@@ -314,27 +311,20 @@ points:
           row_net: R3
 
     # Helper points
-    roller:
+    roller: #Ref: RE1
       key:
-        # tags:
-        #   helper
-        #   encoder
         column_net: C5
         row_net: R3
       anchor: 
         - ref: thumb_mid_fan
           shift: [7,22]
           rotate: 90  
-
     # The order these diodes are placed is important here.
     # To match up with the schematic they need to go in the
     # same "up the columns left to right" order ergogen creates
     # the row/column points in.
     bav70_bottom1: &bav70proto #Ref: D1
       key:
-        # tags:
-        #   helper
-        #   diode
         A1: outer_bottom
         A2: pinky_bottom
         C: R3
@@ -430,7 +420,6 @@ points:
       anchor:
         <<: *bav70anchor
         shift: [-11,-24]
-
     bav70_fan1: #Ref: D13
       <<:  *bav70proto
       key.A1: near_fan
@@ -476,14 +465,6 @@ points:
       anchor:
         - ref: thumb_far_fan
           shift: [10,12]
-    screw_mcu_cover_left:
-      anchor:
-        - ref: finger_inner_bottom
-          shift: [0.67 ks + 0.032, -0.15 kp -0.001]
-    screw_mcu_cover_right:
-      anchor:
-        - ref: finger_inner_bottom
-          shift: [1.45 ks - 0.356, -0.6 ks +0.03]
   mirror:
     ref: thumb_far_fan
     distance: 3kx
@@ -525,6 +506,8 @@ outlines:
         - ref: mirror_finger_inner_bottom
           shift: [45,-23.45]
       fillet: 6
+  # There is no case generation in this config; these outlines are just to
+  # generate DXF files to pull into onshape for case design.
   case_inner_wall_left:
     - what: outline
       name: board_left
@@ -538,6 +521,18 @@ outlines:
       fillet: 2
       where: /^finger|^thumb|^roller/ 
       size: [keycw, keych] # Roller just happens to be 18x18 same as cherry caps
+  screws:
+    - what: circle
+      where: /screw_pcb/
+      radius: screw_radius
+  screw_heads:
+    - what: circle
+      where: /screw_pcb/
+      radius: screw_head_radius
+  spacers:
+    - what: circle
+      where: /screw_pcb/
+      radius: spacer_radius
 
 pcbs:
   toomanykeys_left:
@@ -564,10 +559,10 @@ pcbs:
           P0: 'C1'
           P2: 'C2'
           P3: 'C3'
-          P4: 'LCD_BL'
-          P5: 'LCD_DC'
-          P6: 'LCD_CLK' # Needs High Freq 
-          P7: 'LCD_DIN' # Needs High Freq
+          P4: 'LCD_DIN' # Needs High Freq
+          P5: 'LCD_CLK' # Needs High Freq
+          P6: 'LCD_DC'  
+          P7: 'LCD_BL'
           P8: 'C4'
           P9: 'C5'
           P101: 'LCD_CS' #Left Extra
@@ -763,10 +758,10 @@ pcbs:
           P0: 'LED_D3V'
           P2: 'R0'
           P3: 'R1'
-          P4: 'LCD_BL'
-          P5: 'LCD_DC'
-          P6: 'LCD_CLK' # Needs High Freq 
-          P7: 'LCD_DIN' # Needs High Freq
+          P4: 'LCD_DIN' # Needs High Freq
+          P5: 'LCD_CLK' # Needs High Freq
+          P6: 'LCD_DC'  
+          P7: 'LCD_BL'
           P8: 'R2'
           P9: 'R3'
           P101: 'R4' #Left Extra
