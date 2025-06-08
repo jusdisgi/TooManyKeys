@@ -555,7 +555,7 @@ pcbs:
           mcu_3dmodel_xyz_offset: [0, 0, 0]
           mcu_3dmodel_xyz_rotation: [0, 0, 0]
           mcu_3dmodel_xyz_scale: [1, 1, 1]
-          P1: 'C0' # Left Top
+          P1: 'C0' # Left Top.
           P0: 'C1'
           P2: 'C2'
           P3: 'C3'
