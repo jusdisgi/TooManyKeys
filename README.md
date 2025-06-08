@@ -22,4 +22,9 @@ Please take a look and let me know if you see anything wrong!
 
 [Ergogen Config](https://github.com/jusdisgi/TooManyKeys/blob/main/config.yaml)
 
+## Some pics of the design
+![image](https://github.com/user-attachments/assets/f48110bb-4674-4418-8030-d74db07ca072)
+![image](https://github.com/user-attachments/assets/30cd4ef9-1f30-4e12-80f0-1a75af09becb)
+
+
 *the name has been chosen by the intended end-user, but will not be applied to the board until it actually exists in the real world.
