@@ -21,3 +21,5 @@ Please take a look and let me know if you see anything wrong!
 [Right Half Schematic](https://github.com/jusdisgi/TooManyKeys/blob/main/toomanykeys_right.kicad_sch)
 
 [Ergogen Config](https://github.com/jusdisgi/TooManyKeys/blob/main/config.yaml)
+
+*the name has been chosen by the intended end-user, but will not be applied to the board until it actually exists in the real world.
