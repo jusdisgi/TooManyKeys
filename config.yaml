@@ -535,7 +535,10 @@ outlines:
       radius: spacer_radius
 
 pcbs:
-  toomanykeys_left:
+# I used toomanykeys_left while working in ergogen. 
+# Once I started the routing I added "unrouted" 
+# to avoid overwriting by mistake.
+  toomanykeys_left_unrouted: 
     template: kicad8
     outlines: 
       main:
@@ -734,7 +737,7 @@ pcbs:
         params:
           hole_size: screw_diameter
           hole_drill: screw_diameter
-  toomanykeys_right:
+  toomanykeys_right_unrouted:
     template: kicad8
     outlines: 
       main:
@@ -754,8 +757,8 @@ pcbs:
           mcu_3dmodel_xyz_offset: [0, 0, 0]
           mcu_3dmodel_xyz_rotation: [0, 0, 0]
           mcu_3dmodel_xyz_scale: [1, 1, 1]
-          P1: '5V_EN' # Left Top
-          P0: 'LED_D3V'
+          P1: 'LED_D3V' # Left Top
+          P0: '5V_EN'
           P2: 'R0'
           P3: 'R1'
           P4: 'LCD_DIN' # Needs High Freq

@@ -11,6 +11,7 @@
 // side: F (default) for Front, B for Back
 // MP: net for mounting points, default is no net. Not recommended to use anything but GND
 // P1-8: nets for pins. Default undefined.
+//
 
 module.exports = {
   params: {
