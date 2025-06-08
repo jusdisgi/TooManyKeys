@@ -9,7 +9,8 @@ Please take a look and let me know if you see anything wrong!
 
 [Right Half PCB](https://github.com/jusdisgi/TooManyKeys/blob/main/toomanykeys_right.kicad_pcb)
 [Right Half Schematic](https://github.com/jusdisgi/TooManyKeys/blob/main/toomanykeys_right.kicad_sch)
-[ergogen config](https://github.com/jusdisgi/TooManyKeys/blob/main/config.yaml)
+
+[Ergogen config](https://github.com/jusdisgi/TooManyKeys/blob/main/config.yaml)
 
 ## What's the status?
 I think it is finished. Please let me know what I've done horribly wronng.
