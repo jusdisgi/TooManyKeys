@@ -1,15 +1,18 @@
 # Work in Progress
 
-New draft actually looks OK! Interested in review and feedback...
+I thinke it might be done?
+Please take a look and let me know if you see anything wrong!
 
 ## Where is everything?
-The current draft [PCB file](https://github.com/jusdisgi/TooManyKeys/blob/main/TooManyKeys.kicad_pcb)
-The [schematic](https://github.com/jusdisgi/TooManyKeys/blob/main/TooManyKeys.kicad_sch)
-The [ergogen config](https://github.com/jusdisgi/TooManyKeys/blob/main/config.yaml)
+[Left Half PCB](https://github.com/jusdisgi/TooManyKeys/blob/main/toomanykeys_left.kicad_pcb)
+[Left Half Schematic](https://github.com/jusdisgi/TooManyKeys/blob/main/toomanykeys_left.kicad_sch)
 
+[Right Half PCB](https://github.com/jusdisgi/TooManyKeys/blob/main/toomanykeys_right.kicad_pcb)
+[Right Half Schematic](https://github.com/jusdisgi/TooManyKeys/blob/main/toomanykeys_right.kicad_sch)
+[ergogen config](https://github.com/jusdisgi/TooManyKeys/blob/main/config.yaml)
 
 ## What's the status?
-I think it is mostly finished. Please let me know what I've done horribly wronng.
+I think it is finished. Please let me know what I've done horribly wronng.
 
 The schematic is complete now, but still not quite properly tied to the PCB. I can update the schematic from the PCB but if I try to update the PCB from the schematic stuff breaks.
 
