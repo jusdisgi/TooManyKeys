@@ -8,6 +8,9 @@ This is a 54-key, ergonomic split keyboard with a few tricks. Some of the featur
 - Kailh [PG1316S](https://holykeebs.com/products/kailh-pg1316s-butterfly-switch-10-pack) ultra-low profile switches
 - A totally absurd [battery](https://www.digikey.com/en/products/detail/maker-emporium-ltd/PIS-1131/13283430) to run all of this stuff...5Ahr!!
 
+## Schematics and Ergogen, just like PB and Chocolate!
+If that seems absurd to you, you need to read [my new doc](https://github.com/jusdisgi/TooManyKeys/blob/main/Schematics_and_Ergogen.md)
+
 ## Work in Progress
 
 I think it might be done? Could it be?
