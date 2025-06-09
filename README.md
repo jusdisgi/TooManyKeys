@@ -1,25 +1,30 @@
-# Work in Progress
+# Too Many Keys
+Soon to be renamed*
 
-New draft actually looks OK! Interested in review and feedback...
+This is a 54-key, ergonomic split keyboard with a few tricks. Some of the features include:
+- 1.69in color [LCD screen](https://www.waveshare.com/product/displays/lcd-oled/lcd-oled-3/1.69inch-lcd-module.htm)
+- Per-key LEDs, using [WS2812B-2020](https://www.adafruit.com/product/4684)
+- A roller encoder based on [CKW12](https://github.com/kumamuk-git/CKW12/tree/main) by Kumamuk, but integrated into the main PCB
+- Kailh [PG1316S](https://holykeebs.com/products/kailh-pg1316s-butterfly-switch-10-pack) ultra-low profile switches
+- A totally absurd [battery](https://www.digikey.com/en/products/detail/maker-emporium-ltd/PIS-1131/13283430) to run all of this stuff...5Ahr!!
+
+## Work in Progress
+
+I think it might be done? Could it be?
+Please take a look and let me know if you see anything wrong!
 
 ## Where is everything?
-The current draft [PCB file](https://github.com/jusdisgi/TooManyKeys/blob/main/TooManyKeys.kicad_pcb)
-The [schematic](https://github.com/jusdisgi/TooManyKeys/blob/main/TooManyKeys.kicad_sch)
-The [ergogen config](https://github.com/jusdisgi/TooManyKeys/blob/main/config.yaml)
+[Left Half PCB](https://github.com/jusdisgi/TooManyKeys/blob/main/toomanykeys_left.kicad_pcb)
+[Right Half PCB](https://github.com/jusdisgi/TooManyKeys/blob/main/toomanykeys_right.kicad_pcb)
+
+[Left Half Schematic](https://github.com/jusdisgi/TooManyKeys/blob/main/toomanykeys_left.kicad_sch)
+[Right Half Schematic](https://github.com/jusdisgi/TooManyKeys/blob/main/toomanykeys_right.kicad_sch)
+
+[Ergogen Config](https://github.com/jusdisgi/TooManyKeys/blob/main/config.yaml)
+
+## Some pics of the design
+![image](https://github.com/user-attachments/assets/f48110bb-4674-4418-8030-d74db07ca072)
+![image](https://github.com/user-attachments/assets/30cd4ef9-1f30-4e12-80f0-1a75af09becb)
 
 
-## What's the status?
-I think it is mostly finished. Please let me know what I've done horribly wronng.
-
-The schematic is complete now, but still not quite properly tied to the PCB. I can update the schematic from the PCB but if I try to update the PCB from the schematic stuff breaks.
-
-That said, DRC runs clean, except for some known issues with the roller encoder which I intend to ignore. The roller is my adaptation of Kumamuk's [CKW12](https://github.com/kumamuk-git/CKW12/tree/main) which has pads right up to the edge cut, but that's by design.
-
-## What this thing is supposed to be
-Well it has Too Many Keys, see? Basically it's the next revision of [BiggieSplays](https://github.com/jusdisgi/biggie-splays), an ergonomic, column-staggered split keyboard with just a bit of splay and lots of bells and whistles. Some of the notable features:
-1. Per-key LEDs, using WS2812B-2020
-2. Kailh PG1316S ultra-low profile switches
-3. The aforementioned roller encoder
-4. LCD screen
-5. A totally absurd battery to run all of this stuff...5Ahr!!
-
+*the name has been chosen by the intended end-user, but will not be applied to the board until it actually exists in the real world.
