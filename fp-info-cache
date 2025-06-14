@@ -1,4 +1,4 @@
-26996484562248020
+26999983750105131
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -106000,6 +106000,20 @@ Inductor swpa
 0
 2
 2
+huntercook
+SKRHADE010
+
+5way 5-way five-way multidirectional navswitch
+0
+8
+6
+huntercook
+SKRHADE010_naked
+
+5way 5-way five-way multidirectional navswitch
+0
+8
+6
 huntercook
 U-DND1616-6
 Diode package, 1 center pad 6 outer
